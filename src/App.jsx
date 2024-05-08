@@ -17,9 +17,17 @@ function App() {
           <li className='hover:border-b-2'>Services</li>
           <li className='hover:border-b-2'>My Skills</li>
           <li className='hover:border-b-2'>My Work</li>
-          <li className='hover:border-b-2'>Contact Me https://www.pinterest.com/pin/744501382178029635/</li>
+          <li className='hover:border-b-2'>Contact Me</li>
         </ul>
       </nav>
+      <div className=" left w-full h-5/6 flex  flex-col justify-center p-4 ">
+        <h2 className='leading-normal ml-12 text-2xl  text-start '>Aoa, My name is </h2>
+        <h1 className='ml-12 text-4xl text-yellow-500'>Uzair Ahmad Khan</h1>
+        <p className='leading-normal ml-12 text-3xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
+      </div>
+      <div className="right">
+        
+      </div>
       </div>
     </>
   )
