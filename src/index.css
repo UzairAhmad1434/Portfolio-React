@@ -4,6 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 .main{
-  background: linear-gradient(#0f0c29,#302b63,#24243e);
+  background: linear-gradient(#1e3c72,#243B55);
+  font-family: 'Roboto', sans-serif;
+}
+.About_me{
+  background: linear-gradient(#1e3c72,#2a5298);
   font-family: 'Roboto', sans-serif;
 }

@@ -27,7 +27,7 @@ function App() {
             <h1 className='ml-12 text-5xl text-yellow-500'>Uzair Ahmad Khan</h1>
             <p className='leading-normal ml-12 text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
             <div className='w-auto p-4'>
-              <button className='px-4 py-2 ml-6 m-2 rounded-3xl text-xl w-64 bg-yellow-500 text-none'>Download CV</button>
+              <button className='px-4 py-2 ml-6 m-2 rounded-3xl text-xl w-64  bg-yellow-500 text-white hover:bg-transparent hover: border-yellow-500 hover: text-yellow-500'>Download CV</button>
               <button className='px-4 py-2 m-2 rounded-3xl text-xl w-64 border-2 border-yellow-500 text-yellow-500'>Let's Talk</button>
             </div>
           </div>
@@ -37,12 +37,12 @@ function App() {
         </div>
       </div>
 
-      <div className="About_me flex justify-around  gap-4 max-md:flex-col items-center main text-white w-full  h-screen ">
+      <div className="About_me flex  flex-row-reverse justify-around  gap-4 max-md:flex-col items-center  text-white w-full  h-screen ">
         <div className="left w-3/5 flex  flex-col  ">
-          <h1 className='leading-normal ml-12 text-3xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
+          <h1 className='leading-normal ml-12 text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
           <p className='leading-normal ml-12 text-xl w-2/3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sunt sapiente a enim aspernatur voluptatibus harum? Odit corporis quam dolorem repellat ab ducimus reiciendis molestiae non eum, dolor error quisquam quis consequatur reprehenderit quidem nobis distinctio velit fugit id iure. Repudiandae, praesentium sed eligendi consectetur hic quia animi ullam alias. Inventore odio aspernatur tempore praesentium nisi, voluptatum nobis consectetur? Quia.</p>
         </div>
-        <div className="right w-2/5 ">
+        <div className="right flex items-center justify-center w-2/5 ">
             <img className='w-96' src="./image/1.jpg" alt="imggg" />
           </div>
       </div>
