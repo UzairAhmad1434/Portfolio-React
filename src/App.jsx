@@ -72,12 +72,15 @@ function App() {
           <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
           <div className='flex gap-12 p-4'>
             <div>
+              <img src="./Image/email_561127.png" alt="" />
              <h1 className='text-lg'> uzairahmadkhanmalik@gmail.com</h1>
             </div>
             <div>
+            <img src="./call_3178167.png" alt="" />
              <h1 className='text-lg'> +92 3135167976</h1>
             </div>
             <div>
+            <img src="./Image/location_535239.png" alt="" />
              <h1 className='text-lg'> Kamra,Pakistan</h1>
             </div>
           </div>
