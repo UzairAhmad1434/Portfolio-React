@@ -66,7 +66,21 @@ function App() {
             <h1 className='text-yellow-500 text-center text-2xl' >Webflow</h1>
             <p className='text-md'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
           </div>
+        </div>       
         </div>
+        <div className="About_me contact w-full p-8 flex flex-col justify-center items-center">
+          <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
+          <div className='flex gap-12 p-4'>
+            <div>
+             <h1 className='text-lg'> uzairahmadkhanmalik@gmail.com</h1>
+            </div>
+            <div>
+             <h1 className='text-lg'> +92 3135167976</h1>
+            </div>
+            <div>
+             <h1 className='text-lg'> Kamra,Pakistan</h1>
+            </div>
+          </div>
         </div>
       </div>
     </>
