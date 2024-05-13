@@ -9,16 +9,16 @@ function App() {
     <div className='text-white overflow-none'>
       <div className=' h-screen w-full main text-white'>
         <nav className=' p-4 flex  text-black-300 justify-around'>
-          <div className='font-thin text-3xl hover:text-yellow-500 cursor-pointer'>UZAIR <span
+          <div className='font-thin text-3xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out'>UZAIR <span
             className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
           <ul className='list-none flex pt-2 justify-around gap-6 text-lg font-medium cursor-pointer 
         '>
-            <li className='hover:border-b-2 border-yellow-500 '>Home</li>
-            <li className='hover:border-b-2 border-yellow-500'>About</li>
-            <li className='hover:border-b-2 border-yellow-500'>Services</li>
-            <li className='hover:border-b-2 border-yellow-500'>My Skills</li>
-            <li className='hover:border-b-2 border-yellow-500'>My Work</li>
-            <li className='hover:border-b-2 border-yellow-500'>Contact Me</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>Home</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>About</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>Services</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>My Skills</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>My Work</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-200 ease-in-out'>Contact Me</li>
           </ul>
         </nav>
         <div className="flex w-full h-5/6 items-center justify-around gap-4 max-md:flex-col ">
@@ -27,7 +27,7 @@ function App() {
             <h1 className='ml-12 text-5xl text-yellow-500'>Uzair Ahmad Khan</h1>
             <p className='leading-normal ml-12 text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
             <div className='w-auto p-4'>
-              <button className='px-4 py-2 ml-6 m-2 rounded-3xl text-xl w-64  bg-yellow-500 text-white hover:bg-transparent '>Download CV</button>
+              <button className='px-4 py-2 ml-6 m-2 rounded-3xl text-xl w-64  bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500'>Download CV</button>
               <button className='px-4 py-2 m-2 rounded-3xl text-xl w-64 border-2 border-yellow-500 text-yellow-500'>Let's Talk</button>
             </div>
           </div>
