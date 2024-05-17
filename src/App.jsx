@@ -70,14 +70,14 @@ function App() {
         </div>
         <div className="About_me contact w-full p-8 flex flex-col justify-center items-center">
           <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
-          <div className='flex gap-12 p-4'>
+          <div className='flex justify-around p-4 flex-wrap max-[820px]:flex-col items-center'>
             <div className='flex flex-col justify-center items-center p-4 px-8 w-1/3'>
               <img className="w-12 m-4 invert-[1]" src="./Image/email_561127.png" alt="" />
              <h1 className='text-lg'> uzairahmadkhanmalik@gmail.com</h1>
             </div>
             <div className='flex flex-col justify-center items-center p-4 px-8 w-1/3'>
             <img className="w-12 m-4 invert-[1]" src="./Image/call_3178167.png" alt="" />
-             <h1 className='text-lg'> +92 3135167976</h1>
+             <h1 className='text-lg'> +923135167976</h1>
             </div>
             <div className='flex flex-col justify-center items-center p-4 px-8 w-1/3'>
             <img className="w-12 m-4 invert-[1]" src="./Image/location_535239.png" alt="" />
