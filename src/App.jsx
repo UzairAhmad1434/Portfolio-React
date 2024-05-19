@@ -49,7 +49,7 @@ function App() {
 
       <div className="main services w-full h-screen flex flex-col  justify-center p-8">
         <h1 className='text-4xl p-4 ml-24 text-start'>My <span className='text-yellow-500'>Services</span></h1>
-        <div className="card flex gap-4 p-8 justify-center">
+        <div className="card flex flex-wrap gap-4 p-8 justify-center">
           <div className='w-60 About_me p-2 rounded-md '>
             <h1 className='text-yellow-500 text-center text-2xl' >HTML/CSS</h1>
             <p className='text-md text-center font-thin '>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
@@ -70,7 +70,7 @@ function App() {
         </div>
         <div className="About_me contact w-full p-8 flex flex-col justify-center items-center">
           <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
-          <div className='flex justify-around p-4 font-light flex-wrap max-[820px]:flex-col items-center'>
+          <div className='flex justify-around p-4 font-lighty flex-wrap max-[820px]:flex-col items-center'>
             <div className='flex flex-col justify-center items-center p-4 px-8 w-1/3'>
               <img className="w-12 m-4 invert-[1]" src="./Image/email_561127.png" alt="" />
              <h1 className='text-lg'> uzairahmadkhanmalik@gmail.com</h1>
