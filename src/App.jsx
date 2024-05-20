@@ -9,9 +9,9 @@ function App() {
     <div className='text-white overflow-none'>
       <div className=' h-screen w-full main text-white'>
         <nav className=' p-4 flex  text-black-300 justify-around'>
-          <div className=' text-3xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
+          <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
             className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
-          <ul className='list-none flex pt-2 justify-around gap-6 text-lg font-light cursor-pointer 
+          <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer 
         '>
             <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
             <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
@@ -41,6 +41,7 @@ function App() {
         <div className="left w-3/5 flex  flex-col items-start ">
           <h1 className='leading-normal ml-12 text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
           <p className='leading-normal ml-12 text-lg font-light w-3/4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aut accusantium nobis quam, possimus consequatur quae, quaerat perferendis eum voluptate dolores iure.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sunt sapiente a enim aspernatur voluptatibus harum? Odit corporis quam dolorem repellat ab ducimus reiciendis molestiae non eum, dolor error quisquam quis consequatur reprehenderit quidem nobis distinctio velit fugit id iure. Repudiandae, praesentium sed eligendi consectetur hic quia animi ullam alias. Inventore odio aspernatur tempore praesentium nisi, voluptatum nobis consectetur? Quia.</p>
+          <button className='px-4 py-2 m-4 ml-12 rounded-3xl text-xl w-64 border-2 border-yellow-500 text-yellow-500'>Let's Talk</button>
         </div>
         <div className="right flex items-center justify-center w-2/5 ">
             <img className='w-96' src="./image/1.jpg" alt="imggg" />
