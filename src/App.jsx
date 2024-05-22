@@ -13,12 +13,12 @@ function App() {
             className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
           <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer 
         '>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
-            <li className='hover:border-b border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
           </ul>
         </nav>
         <div className="flex w-full h-5/6 items-center pl-8 justify-around  max-md:flex-col ">
@@ -44,7 +44,7 @@ function App() {
           <button className='px-4 py-2 m-4 ml-12 rounded-3xl text-xl w-64 border-2 border-yellow-500 text-yellow-500'>Let's Talk</button>
         </div>
         <div className="right flex items-center justify-center w-2/5 ">
-            <img className='w-96' src="./image/1.jpg" alt="imggg" />
+            <img className='w-96 rounded-xl' src="./image/aboutimg.jpg" alt="imggg" />
           </div>
       </div>
 
