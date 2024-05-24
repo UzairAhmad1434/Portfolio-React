@@ -28,7 +28,7 @@ function App() {
             <p className='leading-normal font-light ml-12 text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
             <div className='w-auto p-4'>
               <button className='px-4 py-4 ml-6 m-2 rounded-3xl text-2xl w-64  bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500'>Download CV</button>
-              <button className='px-4 py-4 m-2 rounded-3xl text-2xl w-64 border-2 border-yellow-500 text-yellow-500'>Let's Talk</button>
+              <button className='px-4 py-4 m-2 rounded-3xl text-2xl w-64 border-2 border-yellow-500  text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out'>Let's Talk</button>
             </div>
           </div>
           <div className="right flex items-center justify-center w-2/5">
