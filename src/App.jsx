@@ -1,8 +1,7 @@
-import { useState } from 'react'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -51,6 +50,7 @@ function App() {
         <div className="main services w-full  flex flex-col  justify-center p-8">
           <h1 className='text-4xl p-4 ml-24 text-center'>My <span className='text-yellow-500'>Services</span></h1>
           <div className="cards flex flex-wrap gap-4 p-8 justify-center">
+            <Card card='hello' />
             <div className='w-80 card p-8 m-2'>
               <h1 className='text-yellow-400 text-center text-2xl' >Database</h1>
               <p className='text-md text-center font-light'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
@@ -94,5 +94,14 @@ function App() {
     </>
   )
 }
+function Card(props) {
+  return (
+    <div className='w-80 card p-8 m-2'>
+      <h1 className='text-yellow-400 text-center text-2xl' >{props.card}</h1>
+      <p className='text-md text-center font-light'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
+    </div>
+  )
+}
 
 export default App
+
