@@ -8,6 +8,14 @@ function App() {
       <div className='text-white overflow-none'>
         <div className=' h-screen w-full main text-white'>
           <NAV />
+          <ul className='About_me hidden list-none  flex-col pt-2 justify-center items-center gap-6 text-xl font-light cursor-pointer'>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
+            <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
+          </ul>
           <div className="flex w-full h-5/6 items-center pl-8 justify-around  max-md:flex-col ">
             <div className=" left w-3/5 flex  flex-col justify-center  ">
               <h2 className='leading-normal ml-12 text-3xl font-light text-start '>Aoa, My name is </h2>
