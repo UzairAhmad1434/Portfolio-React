@@ -7,19 +7,7 @@ function App() {
     <>
       <div className='text-white overflow-none'>
         <div className=' h-screen w-full main text-white'>
-          <nav className=' p-4 flex  text-black-300 justify-around'>
-            <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
-              className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
-            <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer 
-        '>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
-              <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
-            </ul>
-          </nav>
+          <NAV />
           <div className="flex w-full h-5/6 items-center pl-8 justify-around  max-md:flex-col ">
             <div className=" left w-3/5 flex  flex-col justify-center  ">
               <h2 className='leading-normal ml-12 text-3xl font-light text-start '>Aoa, My name is </h2>
@@ -86,6 +74,24 @@ function Card(props) {
     </div>
   )
 }
+function NAV() {
+  return (
+    <nav className=' p-4 flex  text-black-300 justify-around'>
+      <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
+        className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
+      <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer'>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
+        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
+      </ul>
+    </nav>
+  )
+}
+
+
 
 export default App
 
