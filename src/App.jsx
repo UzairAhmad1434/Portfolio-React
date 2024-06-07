@@ -43,17 +43,10 @@ function App() {
             <img className='w-96' src="./image/aboutimg.jpg" alt="imggg" />
           </div>
         </div>
+        <div> <CardPage />C</div>
 
-        <div className="main services w-full  flex flex-col  justify-center p-8">
-          <h1 className='text-4xl p-4 ml-24 text-center'>My <span className='text-yellow-500'>Services</span></h1>
-          <div className="cards flex flex-wrap gap-4 p-8 justify-center">
-            <Card card='Database' />
-            <Card card='HTML / CSS' />
-            <Card card='Javascript' />
-            <Card card='React' />
-            <Card card='Webflow' />
-          </div>
-        </div>
+
+
         <div className="About_me contact w-full p-8 h-fit flex flex-col justify-center items-center">
           <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
           <div className='flex justify-around p-4 font-lighty flex-wrap max-[820px]:flex-col items-center'>
@@ -74,6 +67,22 @@ function App() {
       </div>
     </>
   )
+}
+
+function CardPage() {
+  return (
+    <div className="main services w-full  flex flex-col  justify-center p-8">
+      <h1 className='text-4xl p-4 ml-24 text-center'>My <span className='text-yellow-500'>Services</span></h1>
+      <div className="cards flex flex-wrap gap-4 p-8 justify-center">
+        <Card card='Database' />
+        <Card card='HTML / CSS' />
+        <Card card='Javascript' />
+        <Card card='React' />
+        <Card card='Webflow' />
+      </div>
+    </div>
+  )
+
 }
 function Card(props) {
   return (
