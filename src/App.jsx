@@ -61,7 +61,7 @@ function NAV() {
 }
 function Dropdown() {
   return (
-    <ul className=' About_me fixed right-20 list-none w-auto p-8 sm:w-80 flex-col pt-2 justify-center items-center gap-6 text-xl font-light cursor-pointer'>
+    <ul className=' About_me fixed right-20 list-none w-auto p-8  sm:w-80 flex-col  justify-center items-center gap-6 text-xl font-light cursor-pointer'>
       <img className='absolute top-0 right-0 m-4' src="./Image/cancel.svg" alt="cancel" />
       <li className='hover: p-4 text-center transition-all duration-100 ease-in-out'>Home</li>
       <li className=' p-4 text-center transition-all duration-100 ease-in-out'>About</li>
