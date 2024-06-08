@@ -1,5 +1,7 @@
 
 import './App.css'
+import PropTypes from 'prop-types';
+
 
 function App() {
 
@@ -8,7 +10,6 @@ function App() {
       <div className='text-white overflow-none'>
 
         <NAV />
-        <Dropdown />
         <Home />
         <AboutMe />
         <CardPage />
@@ -48,31 +49,33 @@ function NAV() {
       <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
         className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
       <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer'>
-        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
-        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
-        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
-        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
-        <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
-        <img src="./Image/menu.svg" alt="" />
+        <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
+        <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
+        <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
+        <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
+        <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
+        <img className='md:hidden' src="./Image/menu.svg" alt="" />
       </ul>
     </nav>
   )
 }
 function Dropdown() {
   return (
-    <ul className='About_me hidden list-none  flex-col pt-2 justify-center items-center gap-6 text-xl font-light cursor-pointer'>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>About</li>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Services</li>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Skills</li>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>My Work</li>
-      <li className='hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Contact Me</li>
+    <ul className=' About_me fixed right-20 list-none w-auto p-8 sm:w-80 flex-col pt-2 justify-center items-center gap-6 text-xl font-light cursor-pointer'>
+      <img className='absolute top-0 right-0 m-4' src="./Image/cancel.svg" alt="cancel" />
+      <li className='hover: p-4 text-center transition-all duration-100 ease-in-out'>Home</li>
+      <li className=' p-4 text-center transition-all duration-100 ease-in-out'>About</li>
+      <li className=' p-4 text-center transition-all duration-100 ease-in-out'>Services</li>
+      <li className=' p-4 text-center transition-all duration-100 ease-in-out'>My Skills</li>
+      <li className=' p-4 text-center transition-all duration-100 ease-in-out'>My Work</li>
+      <li className=' p-4 text-center transition-all duration-100 ease-in-out'>Contact Me</li>
     </ul>
   )
 }
 function Home() {
   return (
     <div className=' h-screen w-full main text-white'>
+      <Dropdown />
       <div className="flex w-full h-5/6 items-center pl-8 justify-around  max-md:flex-col ">
         <div className=" left w-3/5 flex  flex-col justify-center  ">
           <h2 className='leading-normal ml-12 text-3xl font-light text-start '>Aoa, My name is </h2>
@@ -128,5 +131,9 @@ function Contact(props) {
     </div>
   )
 }
+Contact.propTypes = {
+  source: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 export default App
 
