@@ -5,6 +5,10 @@ import PropTypes from 'prop-types';
 
 function App() {
 
+  function OpenSideBar() {
+
+  }
+
   return (
     <>
       <div className='text-white overflow-none'>
@@ -14,6 +18,7 @@ function App() {
         <AboutMe />
         <CardPage />
         <ContactMe />
+        <Footer />
 
       </div>
     </>
@@ -135,5 +140,15 @@ Contact.propTypes = {
   source: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
+
+function Footer() {
+  return (
+    <div>
+      <footer className='text-white p-8 text-xl main font-thin text-center'>
+        <p> &#169;Copyright Reserved 2024 | Uzair's Portfolio</p>
+      </footer>
+    </div>
+  )
+}
 export default App
 
