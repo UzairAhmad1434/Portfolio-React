@@ -51,7 +51,7 @@ function Card(props) {
 function NAV() {
   return (
     <nav className=' p-4 flex  main text-black-300 justify-around text-white'>
-      <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-medium'>UZAIR <span
+      <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light'>UZAIR <span
         className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
       <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer'>
         <li className='hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out'>Home</li>
@@ -66,7 +66,7 @@ function NAV() {
 }
 function Dropdown() {
   return (
-    <ul className=' About_me fixed right-20 list-none w-auto p-8  sm:w-80 flex-col  justify-center items-center gap-6 text-xl font-light cursor-pointer'>
+    <ul className=' About_me absolute list-none w-full p-8  flex-col  justify-center items-center gap-6 text-xl font-light cursor-pointer'>
       <img className='absolute top-0 right-0 m-4' src="./Image/cancel.svg" alt="cancel" />
       <li className='hover: p-4 text-center transition-all duration-100 ease-in-out'>Home</li>
       <li className=' p-4 text-center transition-all duration-100 ease-in-out'>About</li>
@@ -118,7 +118,7 @@ function ContactMe() {
   return (
     <div className="About_me contact w-full p-8 h-fit flex flex-col justify-center items-center">
       <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
-      <div className='flex justify-around p-4 font-lighty flex-wrap max-[820px]:flex-col items-center'>
+      <div className='flex justify-around p-4 font-lighty flex-wrap items-center'>
 
         <Contact name='uzairahmadkhanmalik@gmail.com' source='./Image/email_561127.png' />
         <Contact name='+92 3135167976' source='./Image/call_3178167.png' />
@@ -145,7 +145,7 @@ function Footer() {
   return (
     <div>
       <footer className='text-white p-8 text-xl main font-thin text-center'>
-        <p> &#169;Copyright Reserved 2024 | Uzair's Portfolio</p>
+        <p> &#169;2024 Copyright Reserved  | Uzair's Portfolio</p>
       </footer>
     </div>
   )
