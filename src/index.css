@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 /* .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
@@ -74,15 +79,14 @@
   font-style: italic;
 } */
 
-
-.main{
-  background: linear-gradient(#1e3c72,#243B55);
-  font-family: 'Roboto', sans-serif;
+.main {
+  background: linear-gradient(#1e3c72, #243b55);
+  font-family: "Roboto", sans-serif;
 }
-.About_me{
-  background: linear-gradient(#1e3c72,#2a5298);
-  font-family: 'Roboto', sans-serif;
+.About_me {
+  background: linear-gradient(#1e3c72, #2a5298);
+  font-family: "Roboto", sans-serif;
 }
-.card{
-  background: linear-gradient(#457fca,#5691c8);;
+.card {
+  background: linear-gradient(#457fca, #5691c8);
 }
