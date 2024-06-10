@@ -28,7 +28,7 @@ function App() {
 function CardPage() {
   return (
     <div className="main services w-full  flex flex-col  justify-center p-4 py-12">
-      <h1 className='text-4xl p-4 ml-24 text-center'>My <span className='text-yellow-500'>Services</span></h1>
+      <h1 className='text-4xl p-4  text-center'>My <span className='text-yellow-500'>Services</span></h1>
       <div className="cards flex flex-wrap gap-2 justify-center">
         <Card card='Database' />
         <Card card='HTML / CSS' />
@@ -38,11 +38,10 @@ function CardPage() {
       </div>
     </div>
   )
-
 }
 function Card(props) {
   return (
-    <div className='sm:w-80 w-64 card p-8 m-2'>
+    <div className='md:w-80 w-full card p-8 m-2'>
       <h1 className='text-yellow-400 text-center text-2xl' >{props.card}</h1>
       <p className='text-md text-center font-light'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
     </div>
@@ -64,6 +63,7 @@ function NAV() {
     </nav>
   )
 }
+
 function Dropdown() {
   return (
     <ul className=' hidden About_me absolute list-none w-full p-8  flex-col  justify-center items-center gap-6 text-xl font-light cursor-pointer'>
@@ -84,7 +84,7 @@ function Home() {
       <div className="flex w-full  lg:gap-0 md:gap-8 gap-8 justify-around  max-md:flex-col ">
         <div className=" left md:w-3/5 w-full flex  flex-col justify-center  ">
           <h2 className='leading-normal lg:text-3xl text-2xl   font-light text-start '>Aoa, My name is </h2>
-          <h1 className='lg:text-5xl text-3xl  text-yellow-500'>Uzair Ahmad Khan</h1>
+          <h1 className='lg:text-5xl text-4xl  text-yellow-500'>Uzair Ahmad Khan</h1>
           <p className='leading-normal font-light text-3xl lg:text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
           <div className='w-auto flex gap-2'>
             <button className='py-4  text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500'>Download CV</button>
@@ -101,14 +101,14 @@ function Home() {
 
 function AboutMe() {
   return (
-    <div className="About_me flex  flex-row-reverse justify-around  gap-4 max-md:flex-col items-center  text-white w-full py-12">
-      <div className="left w-3/5 flex  flex-col items-start ">
-        <h1 className='leading-normal ml-12 text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
-        <p className='leading-normal ml-12 text-lg font-light w-3/4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aut accusantium nobis quam, possimus consequatur quae, quaerat perferendis eum voluptate dolores iure.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sunt sapiente a enim aspernatur voluptatibus harum? Odit corporis quam dolorem repellat ab ducimus reiciendis molestiae non eum, dolor error quisquam quis consequatur reprehenderit quidem nobis distinctio velit fugit id iure. Repudiandae, praesentium sed eligendi consectetur hic quia animi ullam alias. Inventore odio aspernatur tempore praesentium nisi, voluptatum nobis consectetur? Quia.</p>
-        <button className='px-4 py-2 m-4 ml-12  text-xl w-44 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out'>Let's Talk</button>
+    <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center  text-white w-full py-12">
+      <div className="left md:w-3/5 w-full flex  flex-col items-start ">
+        <h1 className='leading-normal  text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
+        <p className='leading-normal  text-lg font-light w-full'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia soluta suscipit quisquam recusandae, incidunt est vitae distinctio sed, accusantium eligendi nisi ut! Illo, quia reprehenderit, quidem debitis pariatur officiis distinctio, repellat repellendus molestias possimus aliquid. Voluptate, iusto.</p>
+        <button className='px-4 py-2 text-xl w-44 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out'>Let's Talk</button>
       </div>
-      <div className="right flex items-center justify-center w-2/5 ">
-        <img className='w-96' src="./image/aboutimg.jpg" alt="imggg" />
+      <div className="right flex items-center justify-center md:w-2/5 w-full ">
+        <img className='md:w-96 w-full' src="./image/aboutimg.jpg" alt="imggg" />
       </div>
     </div>
   )
@@ -129,7 +129,7 @@ function ContactMe() {
 
 function Contact(props) {
   return (
-    <div className='sm:w-80 w-64  card p-8'>
+    <div className='md:w-80 w-full  card p-8'>
       <img className="w-12 m-4 invert-[1] flex justify-center items-center" src={props.source} alt="" />
       <h1 className='sm:text-lg text-sm text-yellow-300'>{props.name}</h1>
     </div>
