@@ -79,20 +79,20 @@ function Dropdown() {
 }
 function Home() {
   return (
-    <div className='w-full main p-12 text-white'>
+    <div className='w-full main md:p-12 p-4 py-12 text-white'>
       <Dropdown />
-      <div className="flex w-full  items-center  justify-around  max-md:flex-col ">
-        <div className=" left md:w-3/5  w-full flex  flex-col justify-center  ">
-          <h2 className='leading-normal text-3xl font-light text-start '>Aoa, My name is </h2>
-          <h1 className='text-5xl text-yellow-500'>Uzair Ahmad Khan</h1>
-          <p className='leading-normal font-light text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
+      <div className="flex w-full  lg:gap-0 md:gap-8 gap-8 justify-around  max-md:flex-col ">
+        <div className=" left md:w-3/5 w-full flex  flex-col justify-center  ">
+          <h2 className='leading-normal lg:text-3xl text-2xl   font-light text-start '>Aoa, My name is </h2>
+          <h1 className='lg:text-5xl text-3xl  text-yellow-500'>Uzair Ahmad Khan</h1>
+          <p className='leading-normal font-light text-3xl lg:text-4xl'>I'm a Web Designer <span className='text-yellow-500'>&</span> Frontend<br /> Developer</p>
           <div className='w-auto flex gap-2'>
-            <button className=' py-4 m-2  text-2xl w-56  bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500'>Download CV</button>
-            <button className='py-4 m-2  text-2xl w-56 border-2 border-yellow-500  text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out'>Let's Talk</button>
+            <button className='py-4  text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500'>Download CV</button>
+            <button className='py-4  text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 border-2 border-yellow-500  text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out'>Let's Talk</button>
           </div>
         </div>
-        <div className="right flex items-center justify-center w-2/5">
-          <img className='w-96 ' src="./image/1.jpg" alt="imggg" />
+        <div className="right flex items-center justify-center md:p-4">
+          <img className='md:w-96 w-full  ' src="./image/1.jpg" alt="imggg" />
         </div>
       </div>
     </div>
