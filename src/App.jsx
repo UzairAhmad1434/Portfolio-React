@@ -27,9 +27,9 @@ function App() {
 
 function CardPage() {
   return (
-    <div className="main services w-full  flex flex-col  justify-center p-8">
+    <div className="main services w-full  flex flex-col  justify-center p-4 ">
       <h1 className='text-4xl p-4 ml-24 text-center'>My <span className='text-yellow-500'>Services</span></h1>
-      <div className="cards flex flex-wrap gap-4 p-8 justify-center">
+      <div className="cards flex flex-wrap gap-2 justify-center">
         <Card card='Database' />
         <Card card='HTML / CSS' />
         <Card card='Javascript' />
@@ -101,7 +101,7 @@ function Home() {
 
 function AboutMe() {
   return (
-    <div className="About_me flex  flex-row-reverse justify-around  gap-4 max-md:flex-col items-center  text-white w-full  h-screen ">
+    <div className="About_me flex  flex-row-reverse justify-around  gap-4 max-md:flex-col items-center  text-white w-full py-12">
       <div className="left w-3/5 flex  flex-col items-start ">
         <h1 className='leading-normal ml-12 text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
         <p className='leading-normal ml-12 text-lg font-light w-3/4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, aut accusantium nobis quam, possimus consequatur quae, quaerat perferendis eum voluptate dolores iure.Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro sunt sapiente a enim aspernatur voluptatibus harum? Odit corporis quam dolorem repellat ab ducimus reiciendis molestiae non eum, dolor error quisquam quis consequatur reprehenderit quidem nobis distinctio velit fugit id iure. Repudiandae, praesentium sed eligendi consectetur hic quia animi ullam alias. Inventore odio aspernatur tempore praesentium nisi, voluptatum nobis consectetur? Quia.</p>
@@ -116,13 +116,12 @@ function AboutMe() {
 
 function ContactMe() {
   return (
-    <div className="About_me contact w-full p-8 h-fit flex flex-col justify-center items-center">
-      <h1 className="text-4xl">Contact <span className="text-yellow-500">Me</span></h1>
-      <div className='flex justify-around p-4 font-lighty flex-wrap items-center'>
-
-        <Contact name='uzairahmadkhanmalik@gmail.com' source='./Image/email_561127.png' />
-        <Contact name='+92 3135167976' source='./Image/call_3178167.png' />
+    <div className="About_me contact w-full p-4 h-fit py-8 flex flex-col justify-center items-center">
+      <h1 className="text-4xl p-4">Contact <span className="text-yellow-500">Me</span></h1>
+      <div className='flex flex-wrap gap-2  justify-center'>
+        <Contact name='+923135167976' source='./Image/call_3178167.png' />
         <Contact name='Kamra,Pakistan' source='./Image/location_535239.png' />
+        <Contact name='uzairahmadkhanmalik@gmail.com' source='./Image/email_561127.png' />
       </div>
     </div>
   )
@@ -130,9 +129,9 @@ function ContactMe() {
 
 function Contact(props) {
   return (
-    <div className='flex flex-col justify-center items-center p-4 px-8 w-1/3'>
-      <img className="w-12 m-4 invert-[1]" src={props.source} alt="" />
-      <h1 className='text-lg'>{props.name}</h1>
+    <div className='w-80 card p-4'>
+      <img className="w-12 m-4 invert-[1] flex justify-center items-center" src={props.source} alt="" />
+      <h1 className='text-lg text-yellow-300'>{props.name}</h1>
     </div>
   )
 }
