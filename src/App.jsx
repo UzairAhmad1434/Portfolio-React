@@ -42,8 +42,8 @@ function CardPage() {
 function Card(props) {
   return (
     <div className='md:w-80 w-full card p-8 m-2'>
-      <h1 className='text-yellow-400 text-center text-2xl' >{props.card}</h1>
-      <p className='text-md text-center font-light'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
+      <h1 className='text-yellow-400 text-left text-2xl' >{props.card}</h1>
+      <p className='text-md text-left font-light'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id possimus corrupti, aliquid laudantium iste explicabo molestiae odio eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime incidunt optio non aliquam accusamus, vel iste.</p>
     </div>
   )
 }
@@ -105,7 +105,7 @@ function AboutMe() {
       <div className="left md:w-3/5 w-full flex  flex-col items-start ">
         <h1 className='leading-normal  text-4xl  text-start'>About <span className='text-yellow-500'>Me</span></h1>
         <p className='leading-normal  text-lg font-light w-full'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia soluta suscipit quisquam recusandae, incidunt est vitae distinctio sed, accusantium eligendi nisi ut! Illo, quia reprehenderit, quidem debitis pariatur officiis distinctio, repellat repellendus molestias possimus aliquid. Voluptate, iusto.</p>
-        <button className='px-4 py-2 text-xl w-44 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out'>Let's Talk</button>
+        <button className='px-4 my-2 py-2 text-xl w-44 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out'>Let's Talk</button>
       </div>
       <div className="right flex items-center justify-center md:w-2/5 w-full ">
         <img className='md:w-96 w-full' src="./image/aboutimg.jpg" alt="imggg" />
@@ -118,7 +118,7 @@ function ContactMe() {
   return (
     <div className="About_me contact w-full p-4 h-fit py-12 flex flex-col justify-center items-center">
       <h1 className="text-4xl p-4">Contact <span className="text-yellow-500">Me</span></h1>
-      <div className='flex flex-wrap gap-2  justify-center'>
+      <div className='flex flex-wrap gap-2 items-center justify-center'>
         <Contact name='+923135167976' source='./Image/call_3178167.png' />
         <Contact name='Kamra,Pakistan' source='./Image/location_535239.png' />
         <Contact name='uzairahmadkhanmalik@gmail.com' source='./Image/email_561127.png' />
@@ -130,8 +130,8 @@ function ContactMe() {
 function Contact(props) {
   return (
     <div className='md:w-80 w-full  card p-8'>
-      <img className="w-12 m-4 invert-[1] flex justify-center items-center" src={props.source} alt="" />
-      <h1 className='sm:text-lg text-sm text-yellow-300'>{props.name}</h1>
+      <img className="w-12 m-4 invert-[1] " src={props.source} alt="" />
+      <h1 className='sm:text-lg text-sm text-yellow-500'>{props.name}</h1>
     </div>
   )
 }
