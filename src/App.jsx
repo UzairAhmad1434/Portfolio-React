@@ -49,7 +49,7 @@ function Card(props) {
 }
 function NAV() {
   return (
-    <nav className=' p-4 flex  main text-black-300 justify-around text-white'>
+    <nav className='About_me p-4 flex  main text-black-300 justify-around text-white'>
       <div className=' text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light'>UZAIR <span
         className=' border-none text-yellow-500 font-extrabold  hover:text-white '  >.</span></div>
       <ul className='list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer'>
