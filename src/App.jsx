@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 function App() {
-  function OpenSideBar() {}
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
       <div className="text-white overflow-none">
-        <NAV />
-        <Home />
+        <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Home isOpen={isOpen} setIsOpen={setIsOpen} />
         <AboutMe />
         <CardPage />
         <ContactMe />
@@ -19,8 +20,8 @@ function App() {
 
 function CardPage() {
   return (
-    <div className="main services w-full  flex flex-col  justify-center p-4 py-12">
-      <h1 className="text-4xl p-4  text-center">
+    <div className="main services w-full flex flex-col justify-center p-4 py-12">
+      <h1 className="text-4xl p-4 text-center">
         My <span className="text-yellow-500">Services</span>
       </h1>
       <div className="cards flex flex-wrap gap-2 justify-center">
@@ -33,6 +34,7 @@ function CardPage() {
     </div>
   );
 }
+
 function Card(props) {
   return (
     <div className="md:w-80 w-full card p-8 m-2">
@@ -46,12 +48,13 @@ function Card(props) {
     </div>
   );
 }
-function NAV() {
+
+function NAV({ isOpen, setIsOpen }) {
   return (
-    <nav className="About_me p-4 flex  main text-black-300 justify-around text-white">
-      <div className=" text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
+    <nav className="About_me p-4 flex main text-black-300 justify-around text-white">
+      <div className="text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
-        <span className=" border-none text-yellow-500 font-extrabold  hover:text-white ">
+        <span className="border-none text-yellow-500 font-extrabold hover:text-white">
           .
         </span>
       </div>
@@ -71,51 +74,52 @@ function NAV() {
         <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
           My Work
         </li>
-        <img className="md:hidden" src="./Image/menu.svg" alt="" />
+        <img
+          className="md:hidden w-8 h-8"
+          src={isOpen ? "./Image/cancel.svg" : "./Image/menu.svg"}
+          alt="menu"
+          onClick={() => setIsOpen(!isOpen)}
+        />
       </ul>
+      {isOpen && <Dropdown setIsOpen={setIsOpen} />}
     </nav>
   );
 }
 
-function Dropdown() {
+function Dropdown({ setIsOpen }) {
   return (
-    <ul className=" hidden About_me absolute list-none w-full p-8  flex-col  justify-center items-center gap-6 text-xl font-light cursor-pointer">
-      <img
-        className="absolute top-0 right-0 m-4"
-        src="./Image/cancel.svg"
-        alt="cancel"
-      />
-      <li className="hover: p-4 text-center transition-all duration-100 ease-in-out">
+    <ul className="flex About_me absolute top-28 left-0 list-none w-full p-8 flex-col justify-center items-center gap-6 text-xl font-light cursor-pointer bg-gray-900">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         Home
       </li>
-      <li className=" p-4 text-center transition-all duration-100 ease-in-out">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         About
       </li>
-      <li className=" p-4 text-center transition-all duration-100 ease-in-out">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         Services
       </li>
-      <li className=" p-4 text-center transition-all duration-100 ease-in-out">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         My Skills
       </li>
-      <li className=" p-4 text-center transition-all duration-100 ease-in-out">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         My Work
       </li>
-      <li className=" p-4 text-center transition-all duration-100 ease-in-out">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         Contact Me
       </li>
     </ul>
   );
 }
-function Home() {
+
+function Home({ isOpen, setIsOpen }) {
   return (
     <div className="w-full main md:p-12 p-4 py-12 text-white">
-      <Dropdown />
-      <div className="flex w-full  lg:gap-0 md:gap-8 gap-8 justify-around  max-md:flex-col ">
-        <div className=" left md:w-3/5 w-full flex  flex-col justify-center  ">
-          <h2 className="leading-normal lg:text-3xl text-2xl   font-light text-start ">
+      <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
+        <div className="left md:w-3/5 w-full flex flex-col justify-center">
+          <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">
             Aoa, My name is{" "}
           </h2>
-          <h1 className="lg:text-5xl text-4xl  text-yellow-500">
+          <h1 className="lg:text-5xl text-4xl text-yellow-500">
             Uzair Ahmad Khan
           </h1>
           <p className="leading-normal font-light text-3xl lg:text-4xl">
@@ -124,16 +128,16 @@ function Home() {
             <br /> Developer
           </p>
           <div className="w-auto flex gap-2">
-            <button className="py-4  text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
+            <button className="py-4 text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
               Download CV
             </button>
-            <button className="py-4  text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 border-2 border-yellow-500  text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
+            <button className="py-4 text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
               Let's Talk
             </button>
           </div>
         </div>
         <div className="right flex items-center justify-center md:p-4">
-          <img className="md:w-96 w-full  " src="./image/1.jpg" alt="imggg" />
+          <img className="md:w-96 w-full" src="./image/1.jpg" alt="imggg" />
         </div>
       </div>
     </div>
@@ -142,12 +146,12 @@ function Home() {
 
 function AboutMe() {
   return (
-    <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center  text-white w-full py-12">
-      <div className="left md:w-3/5 w-full flex  flex-col items-start ">
-        <h1 className="leading-normal  text-4xl  text-start">
+    <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
+      <div className="left md:w-3/5 w-full flex flex-col items-start">
+        <h1 className="leading-normal text-4xl text-start">
           About <span className="text-yellow-500">Me</span>
         </h1>
-        <p className="leading-normal  text-lg font-light w-full">
+        <p className="leading-normal text-lg font-light w-full">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
           soluta suscipit quisquam recusandae, incidunt est vitae distinctio
           sed, accusantium eligendi nisi ut! Illo, quia reprehenderit, quidem
@@ -158,7 +162,7 @@ function AboutMe() {
           Let's Talk
         </button>
       </div>
-      <div className="right flex items-center justify-center md:w-2/5 w-full ">
+      <div className="right flex items-center justify-center md:w-2/5 w-full">
         <img
           className="md:w-96 w-full"
           src="./image/aboutimg.jpg"
@@ -189,12 +193,13 @@ function ContactMe() {
 
 function Contact(props) {
   return (
-    <div className="md:w-80 w-full  card p-8">
-      <img className="w-12 m-4 invert-[1] " src={props.source} alt="" />
+    <div className="md:w-80 w-full card p-8">
+      <img className="w-12 m-4 invert-[1]" src={props.source} alt="" />
       <h1 className="sm:text-lg text-sm text-white">{props.name}</h1>
     </div>
   );
 }
+
 Contact.propTypes = {
   source: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -209,4 +214,5 @@ function Footer() {
     </div>
   );
 }
+
 export default App;
