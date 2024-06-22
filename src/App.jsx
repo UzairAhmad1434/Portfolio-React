@@ -82,6 +82,9 @@ function NAV({ isOpen, setIsOpen }) {
         <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
           My Work
         </li>
+        <li className="hidden md:flex text-md  justify-center items-center px-4 hover:bg-yellow-600 ml-12 rounded-full bg-yellow-500 transition-all duration-100 ease-in-out">
+          Hire Me
+        </li>
         <img
           className="md:hidden w-8 h-8"
           src={isOpen ? "./Image/cancel.svg" : "./Image/menu.svg"}
