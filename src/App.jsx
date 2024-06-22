@@ -100,6 +100,9 @@ function NAV({ isOpen, setIsOpen }) {
 function Dropdown({ setIsOpen }) {
   return (
     <ul className="flex About_me absolute top-28 left-0 list-none w-full p-8 flex-col justify-center items-center gap-6 text-xl font-light cursor-pointer bg-gray-900">
+      <li className="flex text-md   px-4 hover:bg-yellow-600  w-full  items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
+        Hire Me
+      </li>
       <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         Home
       </li>
@@ -139,8 +142,9 @@ function Home({ isOpen, setIsOpen }) {
             <br /> Developer
           </p>
           <div className="w-auto flex gap-2">
-            <button className="py-4 text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
+            <button className="p-4 flex text-md md:text-xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
               Download CV
+              <img className="pl-4" src="./Image/download.svg" alt="" />
             </button>
             <button className="py-4 text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
               Let's Talk
