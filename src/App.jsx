@@ -141,13 +141,16 @@ function Home({ isOpen, setIsOpen }) {
             Frontend
             <br /> Developer
           </p>
-          <div className="w-auto flex gap-2">
-            <button className="p-4 flex text-md md:text-xl lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
-              Download CV
-              <img className="pl-4" src="./Image/download.svg" alt="" />
+          <div className="h-auto flex gap-2">
+            <button className="p-2  gap-2 flex items-center justify-center text-md md:text-xl rounded-full lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
+              <p>Download CV</p>
+              <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button className="py-4 text-md md:text-2xl lg:w-52 md:w-40 w-28 my-2 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all duration-300 ease-in-out">
-              Let's Talk
+            <button className="p-4 rounded border-2 border-yellow-500">
+              <img src="./Image/linkedin.svg" alt="" />
+            </button>
+            <button className="p-4 rounded-full border-2 border-yellow-500">
+              <img src="./Image/github.svg" alt="" />
             </button>
           </div>
         </div>

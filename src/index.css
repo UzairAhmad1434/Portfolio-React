@@ -7,6 +7,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+.rounded {
+  border-radius: 50%;
+}
 /* .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
