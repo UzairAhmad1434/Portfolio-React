@@ -141,16 +141,20 @@ function Home({ isOpen, setIsOpen }) {
             Frontend
             <br /> Developer
           </p>
-          <div className="h-auto flex gap-2">
-            <button className="p-2  gap-2 flex items-center justify-center text-md md:text-xl rounded-full lg:w-52 md:w-40 w-28 my-2 bg-yellow-500 text-white hover:bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
+          <div className="lg:h-16 h-12 my-8 flex gap-2">
+            <button className="lg:p-4 p-2 gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2  border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button className="p-4 rounded border-2 border-yellow-500">
-              <img src="./Image/linkedin.svg" alt="" />
+            <button className="lg:p-4 p-2 rounded-full  border-2 border-yellow-500">
+              <a href="https://www.linkedin.com/in/uzair1434/">
+                <img src="./Image/linkedin.svg" alt="" />
+              </a>
             </button>
-            <button className="p-4 rounded-full border-2 border-yellow-500">
-              <img src="./Image/github.svg" alt="" />
+            <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
+              <a href="https://github.com/UzairAhmad1434">
+                <img src="./Image/github.svg" alt="" />
+              </a>
             </button>
           </div>
         </div>
