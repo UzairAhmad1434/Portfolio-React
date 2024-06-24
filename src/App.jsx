@@ -60,13 +60,13 @@ function Card(props) {
 function NAV({ isOpen, setIsOpen }) {
   return (
     <nav className="About_me p-4 flex main text-black-300 justify-around text-white">
-      <div className="text-4xl hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
+      <div className="text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
         <span className="border-none text-yellow-500 font-extrabold hover:text-white">
           .
         </span>
       </div>
-      <ul className="list-none flex pt-2 justify-around gap-6 text-xl font-light cursor-pointer">
+      <ul className="list-none flex pt-2 justify-around items-center gap-6 text-xl font-light cursor-pointer">
         <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
           Home
         </li>
@@ -82,7 +82,7 @@ function NAV({ isOpen, setIsOpen }) {
         <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
           My Work
         </li>
-        <li className="hidden md:flex text-md  justify-center items-center px-4 hover:bg-yellow-600 ml-12 rounded-full bg-yellow-500 transition-all duration-100 ease-in-out">
+        <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-2 border-yellow-500 justify-center items-center px-4 hover:bg-yellow-500 hover:text-white ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
           Hire Me
         </li>
         <img
@@ -142,7 +142,7 @@ function Home({ isOpen, setIsOpen }) {
             <br /> Developer
           </p>
           <div className="lg:h-16 h-12 my-8 flex gap-2">
-            <button className="lg:p-4 p-2 font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2  border-yellow-500 transition-all duration-300 ease-in-out hover:text-yellow-500">
+            <button className="lg:p-4 p-2 font-bold gap-2 flex items-center   justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2  border-yellow-500 transition-all duration-300 ease-in-out">
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
@@ -180,7 +180,7 @@ function AboutMe() {
           debitis pariatur officiis distinctio, repellat repellendus molestias
           possimus aliquid. Voluptate, iusto.
         </p>
-        <button className="px-4 my-2 py-2 text-xl w-44 border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out">
+        <button className="px-4 my-6 py-2 text-xl font-bold w-44 rounded-full border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out">
           Let's Talk
         </button>
       </div>
