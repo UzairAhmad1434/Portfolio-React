@@ -129,7 +129,7 @@ function Home({ isOpen, setIsOpen }) {
   return (
     <div className="w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
-        <div className="left md:w-3/5 px-8 w-full flex flex-col justify-center">
+        <div className="left md:w-3/5 md:px-8 w-full flex flex-col justify-center">
           <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">
             Aoa, My name is{" "}
           </h2>
@@ -169,7 +169,7 @@ function Home({ isOpen, setIsOpen }) {
 function AboutMe() {
   return (
     <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
-      <div className="left md:w-3/5 px-12 w-full flex flex-col items-start">
+      <div className="left md:w-3/5 md:px-12 w-full flex flex-col items-start">
         <h1 className="leading-normal text-4xl text-start">
           About <span className="text-yellow-500">Me</span>
         </h1>
