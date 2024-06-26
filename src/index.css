@@ -95,11 +95,21 @@
 }
 .half {
   width: 40%;
-  border: none;
   outline: none;
+}
+.half:hover {
+  border: 2px solid rgb(255, 197, 6);
 }
 .full {
   width: 85%;
   outline: none;
-  border: none;
+}
+.full:hover {
+  border: 2px solid rgb(255, 197, 6);
+}
+.border {
+  border: 2px solid rgb(255, 197, 6);
+}
+.hover:hover {
+  border: 2px solid rgb(255, 197, 6);
 }

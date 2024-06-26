@@ -13,7 +13,7 @@ function App() {
   }, [isOpen]);
 
   return (
-    <>
+    <div>
       <div className="text-white overflow-none">
         <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
         <Home isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -22,7 +22,7 @@ function App() {
         <ContactMe />
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
 
@@ -56,6 +56,10 @@ function Card(props) {
     </div>
   );
 }
+
+Card.propTypes = {
+  card: PropTypes.string.isRequired,
+};
 
 function NAV({ isOpen, setIsOpen }) {
   return (
@@ -97,10 +101,15 @@ function NAV({ isOpen, setIsOpen }) {
   );
 }
 
+NAV.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+};
+
 function Dropdown({ setIsOpen }) {
   return (
     <ul className="flex About_me absolute top-28 left-0 list-none w-full p-8 flex-col justify-center items-center gap-6 text-xl font-light cursor-pointer bg-gray-900">
-      <li className="flex text-md   px-4 hover:bg-yellow-600  w-full  items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
+      <li className="flex text-md px-4 hover:bg-yellow-600 w-full items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
         Hire Me
       </li>
       <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
@@ -125,6 +134,10 @@ function Dropdown({ setIsOpen }) {
   );
 }
 
+Dropdown.propTypes = {
+  setIsOpen: PropTypes.func.isRequired,
+};
+
 function Home({ isOpen, setIsOpen }) {
   return (
     <div className="w-full main md:p-12 p-4 py-12 text-white">
@@ -142,11 +155,11 @@ function Home({ isOpen, setIsOpen }) {
             <br /> Developer
           </p>
           <div className="lg:h-16 h-12 my-8 flex gap-2">
-            <button className="lg:p-4 p-2 font-bold gap-2 flex items-center   justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2  border-yellow-500 transition-all duration-300 ease-in-out">
+            <button className="lg:p-4 p-2 font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button className="lg:p-4 p-2 rounded-full  border-2 border-yellow-500">
+            <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
               <a href="https://www.linkedin.com/in/uzair1434/">
                 <img src="./Image/linkedin.svg" alt="" />
               </a>
@@ -165,6 +178,11 @@ function Home({ isOpen, setIsOpen }) {
     </div>
   );
 }
+
+Home.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+};
 
 function AboutMe() {
   return (
@@ -197,78 +215,65 @@ function AboutMe() {
 
 function ContactMe() {
   return (
-    <div className="About_me p-8 ">
-      <h1 className="text-4xl p-4 text-center">
-        Contact <span className="text-yellow-500">Me</span>
-      </h1>
-      <div className="flex  contact w-full justify-center items-center ">
-        <div className="w-1/2 flex flex-col items-center h-fit p-12 ">
-          <div className="">
-            <Contact name="+923135167976" source="./Image/call_3178167.png" />
-            <Contact
-              name="Kamra,Pakistan"
-              source="./Image/location_535239.png"
-            />
-            <Contact
-              name="uzairahmadkhanmalik@gmail.com"
-              source="./Image/email_561127.png"
-            />
-          </div>
+    <div className="About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
+      <div className="w-1/2 flex flex-col items-center h-fit p-12">
+        <div className="">
+          <Contact name="+923135167976" source="./Image/call_3178167.png" />
+          <Contact name="Kamra,Pakistan" source="./Image/location_535239.png" />
+          <Contact
+            name="uzairahmadkhanmalik@gmail.com"
+            source="./Image/email_561127.png"
+          />
         </div>
-        <div className="flex justify-center p-8 rounded-xl w-1/2 flex-col items-center main  gap-4 ">
-          <h1 className="text-yellow-500 text-3xl ">Let's Work Together</h1>
-          <p className="full font-light">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
-            temporibus qui magni saepe. Maxime.
-          </p>
-          <div className="display text-lg flex flex-wrap  gap-8 items-center justify-center">
-            <input
-              className="half text-white p-4 About_me"
-              type="text"
-              name="FName"
-              placeholder="First Name"
-              id=""
-            />
-            <input
-              className="half  text-white p-4 About_me"
-              type="text"
-              name="LName"
-              placeholder="Last Name"
-              id=""
-            />
-            <input
-              className="half text-white p-4 About_me"
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              id=""
-            />
-            <input
-              className="half text-white p-4 About_me"
-              type="text"
-              name="Phone"
-              placeholder="Phone No"
-              id=""
-            />
-            <input
-              className="full About_me text-white p-4 border-0"
-              type="text"
-              name="Address"
-              placeholder="Location"
-              id=""
-            />
-            <textarea
-              className="full About_me w-96 text-white p-4 border-0"
-              name="textarea"
-              placeholder="Type Your Message Here"
-              id=""
-            ></textarea>
-          </div>
+      </div>
+      <div className="flex hover justify-center md:p-8 p-4 rounded-xl w-full lg:w-1/2 flex-col items-center m-0 lg:mx-8 main gap-4">
+        <h1 className="text-yellow-500 text-3xl">Let's Work Together</h1>
+        <p className="full font-light">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+          temporibus qui magni saepe. Maxime.
+        </p>
+        <div className="display text-lg flex flex-wrap gap-4 sm:gap-8 items-center justify-center">
+          <Input type="text" placeholder="First Name" class="half" />
+          <Input type="text" placeholder="Last Name" class="half" />
+          <Input type="text" placeholder="Phone Number" class="half" />
+          <Input type="text" placeholder="Location" class="half" />
+          <Input type="email" placeholder="Email" class="full" />
+
+          <textarea
+            className="full About_me text-lg text-white p-4 hover  rounded-md transition-all transition-300 ease-in-out"
+            name="textarea"
+            placeholder="Type Your Message Here"
+            id=""
+          ></textarea>
+          <button
+            className="px-4 py-2 text-md lg:text-xl font-medium hover:text-white hover:bg-yellow-500 rounded-full bg-transparent text-yellow-500 border-2 border-yellow-500 transition-all transition-300 ease-in-out"
+            type="submit"
+          >
+            Send Message
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
+function Input(props) {
+  return (
+    <input
+      className={`${props.class} text-white py-2 px-4 About_me rounded-md transition-all transition-300 ease-in-out`}
+      type={props.type}
+      name="email"
+      placeholder={props.placeholder}
+      id=""
+    />
+  );
+}
+
+Input.propTypes = {
+  class: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+};
 
 function Contact(props) {
   return (
