@@ -93,3 +93,13 @@
 .card {
   background: linear-gradient(#457fca, #5691c8);
 }
+.half {
+  width: 40%;
+  border: none;
+  outline: none;
+}
+.full {
+  width: 85%;
+  outline: none;
+  border: none;
+}

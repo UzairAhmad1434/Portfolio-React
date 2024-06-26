@@ -197,62 +197,73 @@ function AboutMe() {
 
 function ContactMe() {
   return (
-    <div className="flex About_me contact w-full justify-center items-center p-8">
-      <div className=" h-fit p-12 ">
-        <h1 className="text-4xl p-4">
-          Contact <span className="text-yellow-500">Me</span>
-        </h1>
-        <div className="">
-          <Contact name="+923135167976" source="./Image/call_3178167.png" />
-          <Contact name="Kamra,Pakistan" source="./Image/location_535239.png" />
-          <Contact
-            name="uzairahmadkhanmalik@gmail.com"
-            source="./Image/email_561127.png"
-          />
+    <div className="About_me p-8 ">
+      <h1 className="text-4xl p-4 text-center">
+        Contact <span className="text-yellow-500">Me</span>
+      </h1>
+      <div className="flex  contact w-full justify-center items-center ">
+        <div className="w-1/2 flex flex-col items-center h-fit p-12 ">
+          <div className="">
+            <Contact name="+923135167976" source="./Image/call_3178167.png" />
+            <Contact
+              name="Kamra,Pakistan"
+              source="./Image/location_535239.png"
+            />
+            <Contact
+              name="uzairahmadkhanmalik@gmail.com"
+              source="./Image/email_561127.png"
+            />
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center flex-col items-center main p-8 gap-4 ">
-        <h1 className="text-yellow-500 text-3xl ">Let's Work Together</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-          esse fuga a corrupti quasi beatae!
-        </p>
-        <div className="display flex flex-wrap gap-8 items-center justify-center">
-          <input
-            className="w-2/5 text-white p-4 About_me"
-            type="text"
-            name="FName"
-            placeholder="First Name"
-            id=""
-          />
-          <input
-            className="w-2/5 text-white p-4 About_me"
-            type="text"
-            name="LName"
-            placeholder="Last Name"
-            id=""
-          />
-          <input
-            className="w-2/5 text-white p-4 About_me"
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            id=""
-          />
-          <input
-            className="w-2/5 text-white p-4 About_me"
-            type="text"
-            name="Phone"
-            placeholder="Phone No"
-            id=""
-          />
-          <input
-            className="About_me w-5/6  text-white p-4 border-0"
-            type="text"
-            name="Address"
-            placeholder="Location"
-            id=""
-          />
+        <div className="flex justify-center p-8 rounded-xl w-1/2 flex-col items-center main  gap-4 ">
+          <h1 className="text-yellow-500 text-3xl ">Let's Work Together</h1>
+          <p className="full font-light">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
+            temporibus qui magni saepe. Maxime.
+          </p>
+          <div className="display text-lg flex flex-wrap  gap-8 items-center justify-center">
+            <input
+              className="half text-white p-4 About_me"
+              type="text"
+              name="FName"
+              placeholder="First Name"
+              id=""
+            />
+            <input
+              className="half  text-white p-4 About_me"
+              type="text"
+              name="LName"
+              placeholder="Last Name"
+              id=""
+            />
+            <input
+              className="half text-white p-4 About_me"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id=""
+            />
+            <input
+              className="half text-white p-4 About_me"
+              type="text"
+              name="Phone"
+              placeholder="Phone No"
+              id=""
+            />
+            <input
+              className="full About_me text-white p-4 border-0"
+              type="text"
+              name="Address"
+              placeholder="Location"
+              id=""
+            />
+            <textarea
+              className="full About_me w-96 text-white p-4 border-0"
+              name="textarea"
+              placeholder="Type Your Message Here"
+              id=""
+            ></textarea>
+          </div>
         </div>
       </div>
     </div>
