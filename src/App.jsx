@@ -216,17 +216,15 @@ function AboutMe() {
 function ContactMe() {
   return (
     <div className="About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
-      <div className="w-1/2 flex flex-col items-center h-fit p-12">
-        <div className="">
-          <Contact name="+923135167976" source="./Image/phone.svg" />
-          <Contact name="Kamra,Pakistan" source="./Image/location.svg" />
-          <Contact
-            name="uzairahmadkhanmalik@gmail.com"
-            source="./Image/email.svg"
-          />
-        </div>
+      <div className="w-full flex flex-col items-center h-fit p-0 sm:p-4">
+        <Contact name="+923135167976" source="./Image/phone.svg" />
+        <Contact name="Kamra,Pakistan" source="./Image/location.svg" />
+        <Contact
+          name="uzairahmadkhanmalik@gmail.com"
+          source="./Image/email.svg"
+        />
       </div>
-      <div className="flex hover justify-center md:p-8 p-4 rounded-xl w-full lg:w-1/2 flex-col items-center m-0 lg:mx-8 main gap-4">
+      <div className="flex hover justify-center md:p-8 p-4 rounded-xl w-full  flex-col items-center m-0 lg:mx-8 main gap-4">
         <h1 className="text-yellow-500 text-3xl">Let's Work Together</h1>
         <p className="full hover:none font-light">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
@@ -277,13 +275,13 @@ Input.propTypes = {
 
 function Contact(props) {
   return (
-    <div className=" w-full flex items-center p-2">
-      <div className="bg-yellow-500 mx-2">
+    <div className=" w-full flex sm:flex-row flex-col items-center p-2">
+      <div className="bg-yellow-500 m-2 sm:mx-2">
         <img className="p-2 w-12 m-2 invert-[1]" src={props.source} alt="" />
       </div>
-      <h1 className="sm:text-xl text-sm text-yellow-500 font-medium">
+      <p className="sm:text-xl  text-lg text-yellow-500 font-medium">
         {props.name}
-      </h1>
+      </p>
     </div>
   );
 }
