@@ -1,5 +1,71 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+import Slider from "react-slick";
+
+function Responsive() {
+  var settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  return (
+    <div className="slider-container">
+      <div className="main slider-container p-8">
+        <h1 className="text-4xl p-4 text-center">
+          My <span className="text-yellow-500">Services</span>
+        </h1>
+        <Slider {...settings}>
+          <div className="p-4">
+            <Card card="Database" />
+          </div>
+          <div className="p-4">
+            <Card card="HTML / CSS" />
+          </div>
+          <div className="p-4">
+            <Card card="Javascript" />
+          </div>
+          <div className="p-4">
+            <Card card="React" />
+          </div>
+          <div className="p-4">
+            <Card card="Webflow" />
+          </div>
+        </Slider>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,26 +84,9 @@ function App() {
         <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
         <Home isOpen={isOpen} setIsOpen={setIsOpen} />
         <AboutMe />
-        <CardPage />
+        <Responsive />
         <ContactMe />
         <Footer />
-      </div>
-    </div>
-  );
-}
-
-function CardPage() {
-  return (
-    <div className="main services w-full flex flex-col justify-center p-4 py-12">
-      <h1 className="text-4xl p-4 text-center">
-        My <span className="text-yellow-500">Services</span>
-      </h1>
-      <div className="cards flex flex-wrap gap-2 justify-center">
-        <Card card="Database" />
-        <Card card="HTML / CSS" />
-        <Card card="Javascript" />
-        <Card card="React" />
-        <Card card="Webflow" />
       </div>
     </div>
   );
@@ -63,7 +112,7 @@ Card.propTypes = {
 
 function NAV({ isOpen, setIsOpen }) {
   return (
-    <nav className="About_me p-4  flex sticky top-0 w-full main text-black-300 justify-around text-white">
+    <nav className="About_me p-2  flex sticky top-0 w-full main text-black-300 justify-around text-white">
       <div className="text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
         <span className="border-none text-yellow-500 font-extrabold hover:text-white">
