@@ -94,7 +94,7 @@ function App() {
 
 function Card(props) {
   return (
-    <div className="md:w-80 w-full main p-8 m-2">
+    <div className="md:w-80 w-full main md:p-8 p-4 m-2">
       <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
       <p className="text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
