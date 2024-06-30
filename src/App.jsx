@@ -135,7 +135,7 @@ function NAV({ isOpen, setIsOpen }) {
         <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
           My Work
         </li>
-        <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-2 border-yellow-500 justify-center items-center px-4 hover:bg-yellow-500 hover:text-white ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
+        <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-yellow-500 border-2 fill justify-center items-center px-4  ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
           Hire Me
         </li>
         <img
@@ -204,16 +204,16 @@ function Home({ isOpen, setIsOpen }) {
             <br /> Developer
           </p>
           <div className="lg:h-16 h-12 my-8 flex gap-2">
-            <button className="lg:p-4 p-2 font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
+            <button className="lg:p-4 p-2 fill font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
+            <button className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
               <a href="https://www.linkedin.com/in/uzair1434/">
                 <img className="fill" src="./Image/linkedin.svg" alt="" />
               </a>
             </button>
-            <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
+            <button className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
               <a href="https://github.com/UzairAhmad1434">
                 <img src="./Image/github.svg" alt="" />
               </a>
@@ -250,7 +250,7 @@ function AboutMe() {
           debitis pariatur officiis distinctio, repellat repellendus molestias
           possimus aliquid. Voluptate, iusto.
         </p>
-        <button className="px-4 my-6 py-2 text-xl font-bold w-44 rounded-full border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-white transition-all transition-300 ease-in-out">
+        <button className="px-4 my-6 py-2 text-xl font-bold w-44 rounded-full border-2 border-yellow-500 text-yellow-500 fill transition-all transition-300 ease-in-out">
           Let's Talk
         </button>
       </div>
@@ -298,7 +298,7 @@ function ContactMe() {
             id=""
           ></textarea>
           <button
-            className="px-4 py-2 text-md lg:text-xl font-medium hover:text-white hover:bg-yellow-500 rounded-full bg-transparent text-yellow-500 border-2 border-yellow-500 transition-all transition-300 ease-in-out"
+            className="px-4 py-2 text-md lg:text-xl fill font-medium rounded-full bg-transparent text-yellow-500 border-2 border-yellow-500 transition-all transition-300 ease-in-out"
             type="submit"
           >
             Send Message
