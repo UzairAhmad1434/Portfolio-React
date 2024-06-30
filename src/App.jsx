@@ -94,7 +94,7 @@ function App() {
 
 function Card(props) {
   return (
-    <div className="md:w-80 w-full card p-8 m-2">
+    <div className="md:w-80 w-full main p-8 m-2">
       <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
       <p className="text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
@@ -112,7 +112,7 @@ Card.propTypes = {
 
 function NAV({ isOpen, setIsOpen }) {
   return (
-    <nav className="About_me p-2  flex sticky top-0 w-full main text-black-300 justify-around text-white">
+    <nav className="About_me p-2 flex sticky top-0 w-full main text-black-300 justify-around text-white z-50">
       <div className="text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
         <span className="border-none text-yellow-500 font-extrabold hover:text-white">
@@ -210,7 +210,7 @@ function Home({ isOpen, setIsOpen }) {
             </button>
             <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
               <a href="https://www.linkedin.com/in/uzair1434/">
-                <img src="./Image/linkedin.svg" alt="" />
+                <img className="fill" src="./Image/linkedin.svg" alt="" />
               </a>
             </button>
             <button className="lg:p-4 p-2 rounded-full border-2 border-yellow-500">
@@ -276,11 +276,11 @@ function ContactMe() {
           source="./Image/email.svg"
         />
       </div>
-      <div className="flex hover justify-center md:p-8 py-4  rounded-xl w-full  flex-col items-center m-0 lg:mx-8 main gap-4">
+      <div className="flex hover justify-center md:p-8 py-4 rounded-xl w-full flex-col items-center m-0 lg:mx-8 main gap-4">
         <h1 className="text-yellow-500 sm:text-3xl text-xl sm:text-start m-0 sm:m-4 text-center">
           Let's Work Together
         </h1>
-        <p className="full hover:none font-light">
+        <p className="sm:px-12 px-8 hover:none font-light">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
           temporibus qui magni saepe. Maxime.
         </p>
@@ -292,7 +292,7 @@ function ContactMe() {
           <Input type="email" placeholder="Email" class="full" />
 
           <textarea
-            className="full About_me text-lg text-white p-4 hover  rounded-md transition-all transition-300 ease-in-out"
+            className="full About_me text-lg text-white p-4 hover rounded-md transition-all transition-300 ease-in-out"
             name="textarea"
             placeholder="Type Your Message Here"
             id=""
@@ -333,7 +333,7 @@ function Contact(props) {
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">
         <img className="p-2 w-12 m-2 invert-[1]" src={props.source} alt="" />
       </div>
-      <p className="sm:text-xl  text-lg text-yellow-500 font-medium">
+      <p className="sm:text-xl text-lg text-yellow-500 font-medium">
         {props.name}
       </p>
     </div>
