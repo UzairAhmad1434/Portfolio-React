@@ -69,11 +69,11 @@ function Responsive() {
 
 function Myskills() {
   return (
-    <div className="About_me flex-col items-center justify-center p-8">
+    <div className="About_me flex-col items-center justify-center p-4 md:p-8">
       <h1 className="text-center text-3xl">
         My <span className="text-yellow-500">Skills</span>
       </h1>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap gap-4 items-center justify-center font-medium">
         <Skill width="w-[100%]" name="Html" percent="100%" />
         <Skill width="w-[90%]" name="Css" percent="90%" />
         <Skill width="w-[70%]" name="Javascript" percent="70%" />
@@ -86,7 +86,7 @@ function Myskills() {
 
 function Skill(props) {
   return (
-    <div className="p-4 flex flex-col gap-2 w-[40%]">
+    <div className="p-4 flex flex-col gap-2 md:w-[45%] w-[90%]">
       <div className="flex justify-between">
         <h1>{props.name}</h1>
         <h1>{props.percent}</h1>
