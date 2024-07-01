@@ -47,25 +47,62 @@ function Responsive() {
         </h1>
         <Slider {...settings}>
           <div className="p-4">
-            <Card card="Database" />
+            <Card card="Web Development" />
           </div>
           <div className="p-4">
-            <Card card="HTML / CSS" />
+            <Card card="Web Design" />
           </div>
           <div className="p-4">
-            <Card card="Javascript" />
+            <Card card="Webflow Development" />
           </div>
           <div className="p-4">
-            <Card card="React" />
+            <Card card="Photography" />
           </div>
           <div className="p-4">
-            <Card card="Webflow" />
+            <Card card="Clean Code" />
           </div>
         </Slider>
       </div>
     </div>
   );
 }
+
+function Myskills() {
+  return (
+    <div className="About_me flex-col items-center justify-center p-8">
+      <h1 className="text-center text-3xl">
+        My <span className="text-yellow-500">Skills</span>
+      </h1>
+      <div className="flex flex-wrap items-center justify-center">
+        <Skill width="w-[100%]" name="Html" percent="100%" />
+        <Skill width="w-[90%]" name="Css" percent="90%" />
+        <Skill width="w-[70%]" name="Javascript" percent="70%" />
+        <Skill width="w-[80%]" name="Tailwind" percent="90%" />
+        <Skill width="w-[80%]" name="React" percent="80%" />
+      </div>
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <div className="p-4 flex flex-col gap-2 w-[40%]">
+      <div className="flex justify-between">
+        <h1>{props.name}</h1>
+        <h1>{props.percent}</h1>
+      </div>
+      <div className="w-full bg-blue-800 rounded-md">
+        <div className={`${props.width} bg-yellow-500 h-2 rounded-md`}></div>
+      </div>
+    </div>
+  );
+}
+
+Skill.propTypes = {
+  width: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  percent: PropTypes.string.isRequired,
+};
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,6 +122,7 @@ function App() {
         <Home isOpen={isOpen} setIsOpen={setIsOpen} />
         <AboutMe />
         <Responsive />
+        <Myskills />
         <ContactMe />
         <Footer />
       </div>
