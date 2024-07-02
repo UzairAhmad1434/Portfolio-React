@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
+import { gsap } from "gsap";
 
 function Responsive() {
   var settings = {
@@ -69,8 +70,8 @@ function Responsive() {
 
 function Myskills() {
   return (
-    <div className="About_me flex-col items-center justify-center p-4 md:p-8">
-      <h1 className="text-center text-3xl">
+    <div className="About_me flex-col items-center justify-center p-4 md:p-8 ">
+      <h1 className="text-center text-3xl mb-8yc">
         My <span className="text-yellow-500">Skills</span>
       </h1>
       <div className="flex flex-wrap gap-4 items-center justify-center font-medium">
@@ -132,7 +133,7 @@ function App() {
 
 function Card(props) {
   return (
-    <div className="md:w-80 w-full main md:p-8 p-4 m-2">
+    <div className="md:w-80 w-full main md:p-8 p-4 m-2 rounded-md shadow-sm shadow-yellow-500">
       <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
       <p className="text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
@@ -314,7 +315,7 @@ function ContactMe() {
           source="./Image/email.svg"
         />
       </div>
-      <div className="flex hover justify-center md:p-8 py-4 rounded-xl w-full flex-col items-center m-0 lg:mx-8 main gap-4">
+      <div className="flex hover shadow-sm shadow-black justify-center md:p-8 py-4 rounded-xl w-full flex-col items-center m-0 lg:mx-8 main gap-4">
         <h1 className="text-yellow-500 sm:text-3xl text-xl sm:text-start m-0 sm:m-4 text-center">
           Let's Work Together
         </h1>
@@ -367,7 +368,7 @@ Input.propTypes = {
 
 function Contact(props) {
   return (
-    <div className="About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2">
+    <div className="About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">
         <img className="p-2 w-12 m-2 invert-[1]" src={props.source} alt="" />
       </div>
