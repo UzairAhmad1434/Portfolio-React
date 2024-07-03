@@ -3,7 +3,9 @@ import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { gsap } from "gsap";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Responsive() {
   var settings = {
@@ -227,17 +229,45 @@ Dropdown.propTypes = {
 };
 
 function Home({ isOpen, setIsOpen }) {
+  const headingref = useRef();
+  const btnref = useRef();
+
+  useGSAP(() => {
+    gsap.from(headingref.current, {
+      x: -100,
+
+      rotate: 10,
+      opacity: 0,
+      delay: 0.2,
+      duration: 1,
+    });
+  });
+  useGSAP(() => {
+    gsap.from(btnref.current, {
+      x: 20,
+      rotate: 360,
+      delay: 0.2,
+      duration: 1,
+    });
+  });
+
   return (
     <div className="w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
         <div className="left md:w-3/5 md:px-8 w-full flex flex-col justify-center">
-          <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">
+          <h2
+            ref={headingref}
+            className="leading-normal lg:text-3xl text-2xl font-light text-start"
+          >
             Aoa, My name is{" "}
           </h2>
-          <h1 className="lg:text-5xl text-4xl text-yellow-500">
+          <h1 ref={headingref} className="lg:text-5xl text-4xl text-yellow-500">
             Uzair Ahmad Khan
           </h1>
-          <p className="leading-normal font-light text-3xl lg:text-4xl">
+          <p
+            ref={headingref}
+            className="leading-normal font-light text-3xl lg:text-4xl"
+          >
             I'm a Web Designer <span className="text-yellow-500">&</span>{" "}
             Frontend
             <br /> Developer
@@ -247,12 +277,18 @@ function Home({ isOpen, setIsOpen }) {
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
+            <button
+              ref={btnref}
+              className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500"
+            >
               <a href="https://www.linkedin.com/in/uzair1434/">
                 <img className="fill" src="./Image/linkedin.svg" alt="" />
               </a>
             </button>
-            <button className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
+            <button
+              ref={btnref}
+              className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500"
+            >
               <a href="https://github.com/UzairAhmad1434">
                 <img src="./Image/github.svg" alt="" />
               </a>
