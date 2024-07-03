@@ -231,12 +231,11 @@ Dropdown.propTypes = {
 function Home({ isOpen, setIsOpen }) {
   const headingref = useRef();
   const btnref = useRef();
+  const secref = useRef();
 
   useGSAP(() => {
     gsap.from(headingref.current, {
       x: -100,
-
-      rotate: 10,
       opacity: 0,
       delay: 0.2,
       duration: 1,
@@ -246,7 +245,15 @@ function Home({ isOpen, setIsOpen }) {
     gsap.from(btnref.current, {
       x: 20,
       rotate: 360,
-      delay: 0.2,
+      delay: 1.3,
+      duration: 0.7,
+    });
+  });
+  useGSAP(() => {
+    gsap.from(secref.current, {
+      scale: 0.7,
+      x: 100,
+      delay: 2.5,
       duration: 1,
     });
   });
@@ -254,20 +261,20 @@ function Home({ isOpen, setIsOpen }) {
   return (
     <div className="w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
-        <div className="left md:w-3/5 md:px-8 w-full flex flex-col justify-center">
+        <div
+          ref={headingref}
+          className="left md:w-3/5 md:px-8 w-full flex flex-col justify-center"
+        >
           <h2
-            ref={headingref}
+            // ref={headingref}
             className="leading-normal lg:text-3xl text-2xl font-light text-start"
           >
             Aoa, My name is{" "}
           </h2>
-          <h1 ref={headingref} className="lg:text-5xl text-4xl text-yellow-500">
+          <h1 className="lg:text-5xl text-4xl text-yellow-500">
             Uzair Ahmad Khan
           </h1>
-          <p
-            ref={headingref}
-            className="leading-normal font-light text-3xl lg:text-4xl"
-          >
+          <p className="leading-normal font-light text-3xl lg:text-4xl">
             I'm a Web Designer <span className="text-yellow-500">&</span>{" "}
             Frontend
             <br /> Developer
@@ -296,7 +303,12 @@ function Home({ isOpen, setIsOpen }) {
           </div>
         </div>
         <div className="right flex items-center justify-center md:p-4">
-          <img className="md:w-96 w-full" src="./image/1.jpg" alt="imggg" />
+          <img
+            ref={secref}
+            className="md:w-96 w-full"
+            src="./image/1.jpg"
+            alt="imggg"
+          />
         </div>
       </div>
     </div>
