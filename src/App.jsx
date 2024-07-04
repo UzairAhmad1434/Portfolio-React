@@ -42,6 +42,18 @@ function Responsive() {
       },
     ],
   };
+
+  let tl2 = gsap.timeline();
+
+  useGSAP(() => {
+    tl2.from(".cards", {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      delay: 4,
+      rotate: 10,
+    });
+  });
   return (
     <div className="slider-container">
       <div className="main slider-container p-8">
@@ -49,21 +61,11 @@ function Responsive() {
           My <span className="text-yellow-500">Services</span>
         </h1>
         <Slider {...settings}>
-          <div className="p-4">
-            <Card card="Web Development" />
-          </div>
-          <div className="p-4">
-            <Card card="Web Design" />
-          </div>
-          <div className="p-4">
-            <Card card="Webflow Development" />
-          </div>
-          <div className="p-4">
-            <Card card="Photography" />
-          </div>
-          <div className="p-4">
-            <Card card="Clean Code" />
-          </div>
+          <Card card="Web Development" />
+          <Card card="Web Design" />
+          <Card card="Webflow Development" />
+          <Card card="Photography" />
+          <Card card="Clean Code" />
         </Slider>
       </div>
     </div>
@@ -135,7 +137,7 @@ function App() {
 
 function Card(props) {
   return (
-    <div className="md:w-80 w-full main md:p-8 p-4 m-2 rounded-md shadow-sm shadow-yellow-500">
+    <div className=".cards md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-yellow-500">
       <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
       <p className="text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
@@ -152,9 +154,10 @@ Card.propTypes = {
 };
 
 function NAV({ isOpen, setIsOpen }) {
+  useGSAP;
   return (
     <nav className="About_me p-2 flex sticky top-0 w-full main text-black-300 justify-around text-white z-50">
-      <div className="text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
+      <div className="logo text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
         <span className="border-none text-yellow-500 font-extrabold hover:text-white">
           .
@@ -230,30 +233,28 @@ Dropdown.propTypes = {
 
 function Home({ isOpen, setIsOpen }) {
   const headingref = useRef();
-  const btnref = useRef();
-  const secref = useRef();
+  let tl = gsap.timeline();
 
   useGSAP(() => {
-    gsap.from(headingref.current, {
+    tl.from(headingref.current, {
       x: -100,
       opacity: 0,
-      delay: 0.2,
       duration: 1,
+      rotate: 10,
     });
   });
   useGSAP(() => {
-    gsap.from(btnref.current, {
+    tl.from(".roll", {
       x: 20,
       rotate: 360,
-      delay: 1.3,
-      duration: 0.7,
+      duration: 1.2,
     });
   });
   useGSAP(() => {
-    gsap.from(secref.current, {
+    tl.from(".image", {
       scale: 0.7,
       x: 100,
-      delay: 2.5,
+      opacity: 0,
       duration: 1,
     });
   });
@@ -280,22 +281,16 @@ function Home({ isOpen, setIsOpen }) {
             <br /> Developer
           </p>
           <div className="lg:h-16 h-12 my-8 flex gap-2">
-            <button className="lg:p-4 p-2 fill font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
+            <button className="slide lg:p-4 p-2 fill font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
               <p>Download CV</p>
               <img className="" src="./Image/download.svg" alt="" />
             </button>
-            <button
-              ref={btnref}
-              className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500"
-            >
+            <button className="roll lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
               <a href="https://www.linkedin.com/in/uzair1434/">
                 <img className="fill" src="./Image/linkedin.svg" alt="" />
               </a>
             </button>
-            <button
-              ref={btnref}
-              className="lg:p-4 p-2 fill rounded-full border-2 border-yellow-500"
-            >
+            <button className="roll lg:p-4 p-2 fill rounded-full border-2 border-yellow-500">
               <a href="https://github.com/UzairAhmad1434">
                 <img src="./Image/github.svg" alt="" />
               </a>
@@ -304,8 +299,7 @@ function Home({ isOpen, setIsOpen }) {
         </div>
         <div className="right flex items-center justify-center md:p-4">
           <img
-            ref={secref}
-            className="md:w-96 w-full"
+            className="image md:w-96 w-full"
             src="./image/1.jpg"
             alt="imggg"
           />
@@ -321,9 +315,26 @@ Home.propTypes = {
 };
 
 function AboutMe() {
+  const aboutref = useRef();
+
+  let tl2 = gsap.timeline();
+
+  useGSAP(() => {
+    tl2.from(aboutref.current, {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      delay: 2,
+      rotate: 10,
+    });
+  });
+
   return (
     <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
-      <div className="left md:w-3/5 md:px-12 w-full flex flex-col items-start">
+      <div
+        ref={aboutref}
+        className="left md:w-3/5 md:px-12 w-full flex flex-col items-start"
+      >
         <h1 className="leading-normal text-4xl text-start">
           About <span className="text-yellow-500">Me</span>
         </h1>
@@ -337,13 +348,13 @@ function AboutMe() {
           debitis pariatur officiis distinctio, repellat repellendus molestias
           possimus aliquid. Voluptate, iusto.
         </p>
-        <button className="px-4 my-6 py-2 text-xl font-bold w-44 rounded-full border-2 border-yellow-500 text-yellow-500 fill transition-all transition-300 ease-in-out">
+        <button className="btn px-4 my-6 py-2 text-xl font-bold w-44 rounded-full border-2 border-yellow-500 text-yellow-500 fill transition-all transition-300 ease-in-out">
           Let's Talk
         </button>
       </div>
       <div className="right flex items-center justify-center md:w-2/5 w-full">
         <img
-          className="md:w-96 w-full"
+          className="image md:w-96 w-full"
           src="./image/aboutimg.jpg"
           alt="imggg"
         />
