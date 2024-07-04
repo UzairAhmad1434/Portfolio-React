@@ -50,14 +50,24 @@ function Responsive() {
       y: -100,
       opacity: 0,
       duration: 1,
-      delay: 4,
+      delay: 1,
       rotate: 10,
     });
   });
+  useGSAP(() => {
+    tl2.from(".up", {
+      y: -50,
+      scale: 0.6,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+    });
+  });
+
   return (
     <div className="slider-container">
       <div className="main slider-container p-8">
-        <h1 className="text-4xl p-4 text-center">
+        <h1 className="up text-4xl p-4 text-center">
           My <span className="text-yellow-500">Services</span>
         </h1>
         <Slider {...settings}>
@@ -73,9 +83,18 @@ function Responsive() {
 }
 
 function Myskills() {
+  useGSAP(() => {
+    gsap.from(".scale", {
+      x: -50,
+      scale: 0.6,
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+    });
+  });
   return (
     <div className="About_me flex-col items-center justify-center p-4 md:p-8 ">
-      <h1 className="text-center text-3xl mb-8yc">
+      <h1 className="up text-4xl p-4 text-center">
         My <span className="text-yellow-500">Skills</span>
       </h1>
       <div className="flex flex-wrap gap-4 items-center justify-center font-medium">
@@ -91,7 +110,7 @@ function Myskills() {
 
 function Skill(props) {
   return (
-    <div className="p-4 flex flex-col gap-2 md:w-[45%] w-[90%]">
+    <div className="scale p-4 flex flex-col gap-2 md:w-[45%] w-[90%]">
       <div className="flex justify-between">
         <h1>{props.name}</h1>
         <h1>{props.percent}</h1>
@@ -247,7 +266,7 @@ function Home({ isOpen, setIsOpen }) {
     tl.from(".roll", {
       x: 20,
       rotate: 360,
-      duration: 1.2,
+      duration: 1,
     });
   });
   useGSAP(() => {
@@ -364,6 +383,16 @@ function AboutMe() {
 }
 
 function ContactMe() {
+  useGSAP(() => {
+    gsap.from(".contact_card", {
+      x: -500,
+      scale: 0.4,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+    });
+  });
+
   return (
     <div className="About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
       <div className="w-full flex flex-col items-center h-fit gap-4 px-2 py-4 sm:p-4">
@@ -374,7 +403,7 @@ function ContactMe() {
           source="./Image/email.svg"
         />
       </div>
-      <div className="flex hover shadow-sm shadow-black justify-center md:p-8 py-4 rounded-xl w-full flex-col items-center m-0 lg:mx-8 main gap-4">
+      <div className="contact_card flex hover shadow-sm shadow-black justify-center md:p-8 py-4 rounded-xl w-full flex-col items-center m-0 lg:mx-8 main gap-4">
         <h1 className="text-yellow-500 sm:text-3xl text-xl sm:text-start m-0 sm:m-4 text-center">
           Let's Work Together
         </h1>
@@ -390,13 +419,13 @@ function ContactMe() {
           <Input type="email" placeholder="Email" class="full" />
 
           <textarea
-            className="full About_me text-lg text-white p-4 hover rounded-md transition-all transition-300 ease-in-out"
+            className="side full About_me text-lg text-white p-4 hover rounded-md transition-all transition-300 ease-in-out"
             name="textarea"
             placeholder="Type Your Message Here"
             id=""
           ></textarea>
           <button
-            className="px-4 py-2 text-md lg:text-xl fill font-medium rounded-full bg-transparent text-yellow-500 border-2 border-yellow-500 transition-all transition-300 ease-in-out"
+            className=" px-4 py-2 text-md lg:text-xl fill font-medium rounded-full bg-transparent text-yellow-500 border-2 border-yellow-500 transition-all transition-300 ease-in-out"
             type="submit"
           >
             Send Message
@@ -410,7 +439,7 @@ function ContactMe() {
 function Input(props) {
   return (
     <input
-      className={`${props.class} text-white py-2 px-4 About_me rounded-md transition-all transition-300 ease-in-out`}
+      className={`${props.class} side text-white py-2 px-4 About_me rounded-md transition-all transition-300 ease-in-out`}
       type={props.type}
       name="email"
       placeholder={props.placeholder}
@@ -427,7 +456,7 @@ Input.propTypes = {
 
 function Contact(props) {
   return (
-    <div className="About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
+    <div className="scale About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">
         <img className="p-2 w-12 m-2 invert-[1]" src={props.source} alt="" />
       </div>
@@ -444,10 +473,22 @@ Contact.propTypes = {
 };
 
 function Footer() {
+  useGSAP(() => {
+    gsap.from(".footerr", {
+      y: 500,
+      scale: 0.6,
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+    });
+  });
   return (
     <div>
       <footer className="text-stone-200 p-8 md:text-xl sm:text-md text-sm main font-thin text-center">
-        <p> &#169;2024 Copyright Reserved | Uzair's Portfolio</p>
+        <p className="footerr">
+          {" "}
+          &#169;2024 Copyright Reserved | Uzair's Portfolio
+        </p>
       </footer>
     </div>
   );
