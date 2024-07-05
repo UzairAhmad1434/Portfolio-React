@@ -3,9 +3,11 @@ import "slick-carousel/slick/slick-theme.css";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
-import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Responsive() {
   var settings = {
@@ -52,22 +54,36 @@ function Responsive() {
       duration: 1,
       delay: 1,
       rotate: 10,
+      scrollTrigger: {
+        trigger: ".cardpage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
   useGSAP(() => {
-    tl2.from(".up", {
+    tl2.from("heading1", {
       y: -50,
       scale: 0.6,
       opacity: 0,
       duration: 1,
       delay: 0.5,
+      scrollTrigger: {
+        trigger: ".cardpage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
 
   return (
-    <div className="slider-container">
+    <div className="cardpage slider-container">
       <div className="main slider-container p-8">
-        <h1 className="up text-4xl p-4 text-center">
+        <h1 className="heading1 text-4xl p-4 text-center">
           My <span className="text-yellow-500">Services</span>
         </h1>
         <Slider {...settings}>
@@ -83,18 +99,42 @@ function Responsive() {
 }
 
 function Myskills() {
+  let tl3 = gsap.timeline();
   useGSAP(() => {
-    gsap.from(".scale", {
+    tl3.from(".scale", {
       x: -50,
       scale: 0.6,
       opacity: 0,
       duration: 1,
       delay: 1,
+      scrollTrigger: {
+        trigger: ".skillpage",
+        scroller: "body",
+        top: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+      },
+    });
+  });
+  useGSAP(() => {
+    tl3.from("heading2", {
+      y: -50,
+      scale: 0.6,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".skillpage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
   return (
-    <div className="About_me flex-col items-center justify-center p-4 md:p-8 ">
-      <h1 className="up text-4xl p-4 text-center">
+    <div className="About_me skillpage flex-col items-center justify-center p-4 md:p-8 ">
+      <h1 className="heading2 text-4xl p-4 text-center">
         My <span className="text-yellow-500">Skills</span>
       </h1>
       <div className="flex flex-wrap gap-4 items-center justify-center font-medium">
@@ -251,15 +291,21 @@ Dropdown.propTypes = {
 };
 
 function Home({ isOpen, setIsOpen }) {
-  const headingref = useRef();
   let tl = gsap.timeline();
 
   useGSAP(() => {
-    tl.from(headingref.current, {
+    tl.from(".sidepage", {
       x: -100,
       opacity: 0,
-      duration: 1,
+      duration: 0.6,
       rotate: 10,
+      scrollTrigger: {
+        trigger: ".homepage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
   useGSAP(() => {
@@ -267,28 +313,35 @@ function Home({ isOpen, setIsOpen }) {
       x: 20,
       rotate: 360,
       duration: 1,
+      scrollTrigger: {
+        trigger: ".homepage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
   useGSAP(() => {
-    tl.from(".image", {
+    tl.from(".homeimage", {
       scale: 0.7,
       x: 100,
       opacity: 0,
       duration: 1,
+      scrollTrigger: {
+        trigger: ".homepage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+      },
     });
   });
 
   return (
-    <div className="w-full main md:p-12 p-4 py-12 text-white">
+    <div className="homepage w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
-        <div
-          ref={headingref}
-          className="left md:w-3/5 md:px-8 w-full flex flex-col justify-center"
-        >
-          <h2
-            // ref={headingref}
-            className="leading-normal lg:text-3xl text-2xl font-light text-start"
-          >
+        <div className="left leftside md:w-3/5 md:px-8 w-full flex flex-col justify-center">
+          <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">
             Aoa, My name is{" "}
           </h2>
           <h1 className="lg:text-5xl text-4xl text-yellow-500">
@@ -318,7 +371,7 @@ function Home({ isOpen, setIsOpen }) {
         </div>
         <div className="right flex items-center justify-center md:p-4">
           <img
-            className="image md:w-96 w-full"
+            className="homeimage md:w-96 w-full"
             src="./image/1.jpg"
             alt="imggg"
           />
@@ -334,26 +387,40 @@ Home.propTypes = {
 };
 
 function AboutMe() {
-  const aboutref = useRef();
-
   let tl2 = gsap.timeline();
 
   useGSAP(() => {
-    tl2.from(aboutref.current, {
-      x: -100,
+    tl2.from(".aboutleft", {
+      x: -500,
       opacity: 0,
       duration: 1,
-      delay: 2,
-      rotate: 10,
+      scrollTrigger: {
+        trigger: ".aboutpage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
+    });
+  });
+  useGSAP(() => {
+    tl2.from(".aboutimage", {
+      scale: 0.5,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".aboutpage",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
 
   return (
-    <div className="About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
-      <div
-        ref={aboutref}
-        className="left md:w-3/5 md:px-12 w-full flex flex-col items-start"
-      >
+    <div className="aboutpage About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
+      <div className="aboutleft md:w-3/5 md:px-12 w-full flex flex-col items-start">
         <h1 className="leading-normal text-4xl text-start">
           About <span className="text-yellow-500">Me</span>
         </h1>
@@ -373,7 +440,7 @@ function AboutMe() {
       </div>
       <div className="right flex items-center justify-center md:w-2/5 w-full">
         <img
-          className="image md:w-96 w-full"
+          className="aboutimage md:w-96 w-full"
           src="./image/aboutimg.jpg"
           alt="imggg"
         />
@@ -385,11 +452,17 @@ function AboutMe() {
 function ContactMe() {
   useGSAP(() => {
     gsap.from(".contact_card", {
-      x: -500,
       scale: 0.4,
       opacity: 0,
       duration: 1,
       delay: 0.5,
+      scrollTrigger: {
+        trigger: ".contact",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
 
@@ -480,6 +553,13 @@ function Footer() {
       opacity: 0,
       duration: 1,
       delay: 1,
+      scrollTrigger: {
+        trigger: ".footer",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
     });
   });
   return (
