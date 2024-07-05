@@ -48,33 +48,31 @@ function Responsive() {
   let tl2 = gsap.timeline();
 
   useGSAP(() => {
-    tl2.from(".cards", {
+    tl2.from(".cardd", {
       y: -100,
-      opacity: 0,
       duration: 1,
-      delay: 1,
       rotate: 10,
       scrollTrigger: {
         trigger: ".cardpage",
         scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
+        top: "top 0%",
+        end: "end -100%",
+        marker: true,
         scrub: 2,
       },
     });
   });
   useGSAP(() => {
-    tl2.from("heading1", {
+    tl2.from(".heading1", {
       y: -50,
       scale: 0.6,
-      opacity: 0,
       duration: 1,
       delay: 0.5,
       scrollTrigger: {
         trigger: ".cardpage",
         scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
+        top: "top 50%",
+        end: "end -100%",
         scrub: 2,
       },
     });
@@ -97,6 +95,23 @@ function Responsive() {
     </div>
   );
 }
+function Card(props) {
+  return (
+    <div className=".cardd md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-yellow-500">
+      <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
+      <p className="text-md text-left font-light">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
+        possimus corrupti, aliquid laudantium iste explicabo molestiae odio
+        eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime
+        incidunt optio non aliquam accusamus, vel iste.
+      </p>
+    </div>
+  );
+}
+
+Card.propTypes = {
+  card: PropTypes.string.isRequired,
+};
 
 function Myskills() {
   let tl3 = gsap.timeline();
@@ -104,7 +119,6 @@ function Myskills() {
     tl3.from(".scale", {
       x: -50,
       scale: 0.6,
-      opacity: 0,
       duration: 1,
       delay: 1,
       scrollTrigger: {
@@ -117,10 +131,9 @@ function Myskills() {
     });
   });
   useGSAP(() => {
-    tl3.from("heading2", {
+    tl3.from(".heading2", {
       y: -50,
       scale: 0.6,
-      opacity: 0,
       duration: 1,
       delay: 0.5,
       scrollTrigger: {
@@ -193,24 +206,6 @@ function App() {
     </div>
   );
 }
-
-function Card(props) {
-  return (
-    <div className=".cards md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-yellow-500">
-      <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
-      <p className="text-md text-left font-light">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
-        possimus corrupti, aliquid laudantium iste explicabo molestiae odio
-        eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime
-        incidunt optio non aliquam accusamus, vel iste.
-      </p>
-    </div>
-  );
-}
-
-Card.propTypes = {
-  card: PropTypes.string.isRequired,
-};
 
 function NAV({ isOpen, setIsOpen }) {
   useGSAP;
@@ -294,18 +289,16 @@ function Home({ isOpen, setIsOpen }) {
   let tl = gsap.timeline();
 
   useGSAP(() => {
-    tl.from(".sidepage", {
+    tl.from(".leftside", {
       x: -100,
       opacity: 0,
       duration: 0.6,
-      rotate: 10,
-      scrollTrigger: {
-        trigger: ".homepage",
-        scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
-        scrub: 2,
-      },
+      // scrollTrigger: {
+      //   trigger: ".homeimage",
+      //   scroller: "body",
+      //   markers: true,
+      //   scrub: 2,
+      // },
     });
   });
   useGSAP(() => {
@@ -313,13 +306,12 @@ function Home({ isOpen, setIsOpen }) {
       x: 20,
       rotate: 360,
       duration: 1,
-      scrollTrigger: {
-        trigger: ".homepage",
-        scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
-        scrub: 2,
-      },
+      // scrollTrigger: {
+      //   trigger: ".homepage",
+      //   scroller: "body",
+      //   markers: true,
+      //   scrub: 2,
+      // },
     });
   });
   useGSAP(() => {
@@ -328,12 +320,13 @@ function Home({ isOpen, setIsOpen }) {
       x: 100,
       opacity: 0,
       duration: 1,
-      scrollTrigger: {
-        trigger: ".homepage",
-        scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
-      },
+      // scrollTrigger: {
+      //   trigger: ".homepage",
+      //   scroller: "body",
+      //   start: "top -100%",
+      //   markers: true,
+      //   scrub: 2,
+      // },
     });
   });
 
@@ -450,10 +443,11 @@ function AboutMe() {
 }
 
 function ContactMe() {
+  let tl4 = gsap.timeline();
   useGSAP(() => {
-    gsap.from(".contact_card", {
+    tl4.from(".contact_card", {
       scale: 0.4,
-      opacity: 0,
+      x: -200,
       duration: 1,
       delay: 0.5,
       scrollTrigger: {
@@ -461,6 +455,21 @@ function ContactMe() {
         scroller: "body",
         top: "center 60%",
         end: "center 20%",
+        scrub: 2,
+      },
+    });
+  });
+  useGSAP(() => {
+    tl4.from(".contactcard", {
+      x: 50,
+      scale: 0.6,
+      duration: 1,
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".skillpage",
+        scroller: "body",
+        top: "top 0%",
+        end: "top -100%",
         scrub: 2,
       },
     });
@@ -529,7 +538,7 @@ Input.propTypes = {
 
 function Contact(props) {
   return (
-    <div className="scale About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
+    <div className="contactcard About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">
         <img className="p-2 w-12 m-2 invert-[1]" src={props.source} alt="" />
       </div>
