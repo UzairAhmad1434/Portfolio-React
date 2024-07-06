@@ -192,16 +192,36 @@ function App() {
     }
   }, [isOpen]);
 
+  const [setx, setIsx] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    gsap.from(".cir", {
+      x: setx.x,
+      y: setx.y,
+    });
+  });
+
+  const handleMouseMove = (e) => {
+    setIsx({
+      x: e.clientX,
+      y: e.clientY,
+    });
+    console.log(e);
+  };
+
   return (
     <div>
-      <div className="text-white overflow-none">
-        <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
-        <Home isOpen={isOpen} setIsOpen={setIsOpen} />
-        <AboutMe />
-        <Responsive />
-        <Myskills />
-        <ContactMe />
-        <Footer />
+      <div onMouseMove={handleMouseMove} className="w-full h-screen">
+        <div className=" cir rounded-full w-12 h-12 bg-gray-500 fixed"> </div>
+        <div className="text-white overflow-none">
+          <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Home isOpen={isOpen} setIsOpen={setIsOpen} />
+          <AboutMe />
+          <Responsive />
+          <Myskills />
+          <ContactMe />
+          <Footer />
+        </div>
       </div>
     </div>
   );
@@ -330,29 +350,8 @@ function Home({ isOpen, setIsOpen }) {
     });
   });
 
-  const [setx, setIsx] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    gsap.from(".cir", {
-      x: setx.x,
-      y: setx.y,
-    });
-  });
-
-  const handleMouseMove = (e) => {
-    setIsx({
-      x: e.clientX,
-      y: e.clientY,
-    });
-    console.log(e);
-  };
-
   return (
     <div className="homepage w-full main md:p-12 p-4 py-12 text-white">
-      <div
-        onMouseMove={handleMouseMove}
-        className=" cir rounded-full w-12 h-12 bg-gray-500 fixed"
-      ></div>
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
         <div className="left leftside md:w-3/5 md:px-8 w-full flex flex-col justify-center">
           <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">
