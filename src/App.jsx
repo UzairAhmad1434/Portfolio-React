@@ -115,21 +115,7 @@ Card.propTypes = {
 
 function Myskills() {
   let tl3 = gsap.timeline();
-  useGSAP(() => {
-    tl3.from(".scale", {
-      x: -50,
-      scale: 0.6,
-      duration: 1,
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".skillpage",
-        scroller: "body",
-        top: "top 0%",
-        end: "top -100%",
-        scrub: 2,
-      },
-    });
-  });
+
   useGSAP(() => {
     tl3.from(".heading2", {
       y: -50,
@@ -141,6 +127,22 @@ function Myskills() {
         scroller: "body",
         top: "center 60%",
         end: "center 20%",
+        scrub: 2,
+      },
+    });
+  });
+  useGSAP(() => {
+    tl3.from(".scale", {
+      y: -50,
+      // scale: 0.6,
+      duration: 0.7,
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: ".skillpage",
+        scroller: "body",
+        top: "top 0%",
+        staggers: 0.3,
+        end: "top -100%",
         scrub: 2,
       },
     });
@@ -228,7 +230,16 @@ function App() {
 }
 
 function NAV({ isOpen, setIsOpen }) {
-  useGSAP;
+  // useEffect(() => {
+  //   const tl5 = gsap.timeline();
+  //   tl5.from("li", {
+  //     y: -50,
+  //     scale: 0.6,
+  //     opacity: 1,
+  //     duration: 1,
+  //     stagger: 0.5,
+  //   });
+  // });
   return (
     <nav className="About_me p-2 flex sticky top-0 w-full main text-black-300 justify-around text-white z-50">
       <div className="logo text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
@@ -312,7 +323,7 @@ function Home({ isOpen, setIsOpen }) {
     tl.from(".leftside", {
       x: -100,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.8,
       // scrollTrigger: {
       //   trigger: ".homeimage",
       //   scroller: "body",
@@ -326,6 +337,7 @@ function Home({ isOpen, setIsOpen }) {
       x: 20,
       rotate: 360,
       duration: 1,
+      stagger: 0.5,
       // scrollTrigger: {
       //   trigger: ".homepage",
       //   scroller: "body",
@@ -339,7 +351,7 @@ function Home({ isOpen, setIsOpen }) {
       scale: 0.7,
       x: 100,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
       // scrollTrigger: {
       //   trigger: ".homepage",
       //   scroller: "body",
@@ -405,28 +417,29 @@ function AboutMe() {
 
   useGSAP(() => {
     tl2.from(".aboutleft", {
-      x: -500,
-      opacity: 0,
+      x: -100,
+      opacity: 0.7,
       duration: 1,
       scrollTrigger: {
-        trigger: ".aboutpage",
+        trigger: ".aboutleft",
         scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
+        top: "top 0",
+        end: "top -100%",
         scrub: 2,
       },
     });
   });
   useGSAP(() => {
     tl2.from(".aboutimage", {
-      scale: 0.5,
+      scale: 0.7,
       opacity: 0,
-      duration: 1,
+      duration: 0.6,
       scrollTrigger: {
         trigger: ".aboutpage",
         scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
+        top: "top 50%",
+        end: "top -50%",
+        marker: true,
         scrub: 2,
       },
     });
@@ -467,7 +480,7 @@ function ContactMe() {
   let tl4 = gsap.timeline();
   useGSAP(() => {
     tl4.from(".contact_card", {
-      scale: 0.4,
+      // scale: 0.4,
       x: -200,
       duration: 1,
       delay: 0.5,
@@ -483,9 +496,10 @@ function ContactMe() {
   useGSAP(() => {
     tl4.from(".contactcard", {
       x: 50,
-      scale: 0.6,
+      // scale: 0.6,
       duration: 1,
       delay: 1,
+      stagger: 0.3,
       scrollTrigger: {
         trigger: ".skillpage",
         scroller: "body",
@@ -576,22 +590,22 @@ Contact.propTypes = {
 };
 
 function Footer() {
-  useGSAP(() => {
-    gsap.from(".footerr", {
-      y: 500,
-      scale: 0.6,
-      opacity: 0,
-      duration: 1,
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".footer",
-        scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
-        scrub: 2,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.from(".footerr", {
+  //     y: -50,
+  //     opacity: 0,
+  //     duration: 1,
+  //     delay: 2,
+  //     scrollTrigger: {
+  //       trigger: ".footerr",
+  //       scroller: "body",
+  //       top: "top 50%",
+  //       markers: true,
+  //       end: "center 20%",
+  //       scrub: 2,
+  //     },
+  //   });
+  // });
   return (
     <div>
       <footer className="text-stone-200 p-8 md:text-xl sm:text-md text-sm main font-thin text-center">
