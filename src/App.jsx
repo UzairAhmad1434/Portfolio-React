@@ -285,15 +285,23 @@ NAV.propTypes = {
 };
 
 function Dropdown({ setIsOpen }) {
+  useGSAP(() => {
+    gsap.from(".dropdown", {
+      y: -100,
+      opacity: 0,
+      duration: 0.8,
+    });
+  });
+
   return (
-    <ul className="flex About_me absolute top-28 left-0 list-none w-full p-8 flex-col justify-center items-center gap-6 text-xl font-light cursor-pointer bg-gray-900">
-      <li className="flex text-md px-4 hover:bg-yellow-600 w-full items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
+    <ul className="flex dropdown About_me absolute top-28 left-0 list-none w-full p-8 flex-col justify-center items-center gap-6 text-xl font-light cursor-pointer bg-gray-900">
+      <li className="li flex text-md px-4 hover:bg-yellow-600 w-full items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
         Hire Me
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className="li p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         Home
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className=" p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
         About
       </li>
       <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
