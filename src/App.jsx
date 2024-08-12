@@ -49,14 +49,15 @@ function Responsive() {
 
   useGSAP(() => {
     tl2.from(".cardd", {
-      y: -100,
+      y: -40,
+      x: -40,
       duration: 1,
-      rotate: 10,
       scrollTrigger: {
         trigger: ".cardpage",
+        markers: true,
         scroller: "body",
         top: "top 0%",
-        end: "end -100%",
+        end: "end -80%",
         marker: true,
         scrub: 2,
       },
@@ -84,22 +85,24 @@ function Responsive() {
         <h1 className="heading1 text-4xl p-4 text-center">
           My <span className="text-yellow-500">Services</span>
         </h1>
-        <Slider {...settings}>
-          <Card card="Web Development" />
-          <Card card="Web Design" />
-          <Card card="Webflow Development" />
-          <Card card="Photography" />
-          <Card card="Clean Code" />
-        </Slider>
+        <div className="slider ">
+          <Slider {...settings}>
+            <Card card="Web Development" />
+            <Card card="Web Design" />
+            <Card card="Webflow Development" />
+            <Card card="Photography" />
+            <Card card="Clean Code" />
+          </Slider>
+        </div>
       </div>
     </div>
   );
 }
 function Card(props) {
   return (
-    <div className=".cardd md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-yellow-500">
-      <h1 className="text-yellow-400 text-left text-2xl">{props.card}</h1>
-      <p className="text-md text-left font-light">
+    <div className="cardd md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-yellow-500">
+      <h1 className="card1 text-yellow-400 text-left text-2xl">{props.card}</h1>
+      <p className="card1 text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
         possimus corrupti, aliquid laudantium iste explicabo molestiae odio
         eius, praesentium ipsum. Repellendus mollitia magni enim. Maxime
@@ -119,7 +122,6 @@ function Myskills() {
   useGSAP(() => {
     tl3.from(".heading2", {
       y: -50,
-      scale: 0.6,
       duration: 1,
       delay: 0.5,
       scrollTrigger: {
@@ -134,7 +136,6 @@ function Myskills() {
   useGSAP(() => {
     tl3.from(".scale", {
       y: -50,
-      // scale: 0.6,
       duration: 0.7,
       stagger: 0.1,
       scrollTrigger: {
@@ -194,54 +195,38 @@ function App() {
     }
   }, [isOpen]);
 
-  const [setx, setIsx] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    gsap.from(".cir", {
-      x: setx.x,
-      y: setx.y,
-    });
-  });
-
-  const handleMouseMove = (e) => {
-    setIsx({
-      x: e.clientX,
-      y: e.clientY,
-    });
-    console.log(e);
-  };
-
   return (
     <div>
-      <div onMouseMove={handleMouseMove} className="w-full h-screen">
-        <div className=" cir rounded-full w-12 h-12 bg-gray-500 fixed"> </div>
-        <div className="text-white overflow-none">
-          <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
-          <Home isOpen={isOpen} setIsOpen={setIsOpen} />
-          <AboutMe />
-          <Responsive />
-          <Myskills />
-          <ContactMe />
-          <Footer />
-        </div>
+      <div className="text-white overflow-none">
+        <NAV isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Home isOpen={isOpen} setIsOpen={setIsOpen} />
+        <AboutMe />
+        <Responsive />
+        <Myskills />
+        <ContactMe />
+        <Footer />
       </div>
     </div>
   );
 }
 
 function NAV({ isOpen, setIsOpen }) {
-  // useEffect(() => {
-  //   const tl5 = gsap.timeline();
-  //   tl5.from("li", {
-  //     y: -50,
-  //     scale: 0.6,
-  //     opacity: 1,
-  //     duration: 1,
-  //     stagger: 0.5,
-  //   });
-  // });
+  useGSAP(() => {
+    gsap.from("li", {
+      y: -30,
+      duration: 1,
+      delay: 0.4,
+    });
+  });
+  useGSAP(() => {
+    gsap.from(".logo", {
+      y: -10,
+      duration: 0.8,
+    });
+  });
+
   return (
-    <nav className="About_me p-2 flex sticky top-0 w-full main text-black-300 justify-around text-white z-50">
+    <nav className=" About_me   p-2 flex sticky top-0 w-full main text-black-300 justify-around text-white z-50">
       <div className="logo text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
         UZAIR{" "}
         <span className="border-none text-yellow-500 font-extrabold hover:text-white">
@@ -332,12 +317,6 @@ function Home({ isOpen, setIsOpen }) {
       x: -100,
       opacity: 0,
       duration: 0.8,
-      // scrollTrigger: {
-      //   trigger: ".homeimage",
-      //   scroller: "body",
-      //   markers: true,
-      //   scrub: 2,
-      // },
     });
   });
   useGSAP(() => {
@@ -346,12 +325,6 @@ function Home({ isOpen, setIsOpen }) {
       rotate: 360,
       duration: 1,
       stagger: 0.5,
-      // scrollTrigger: {
-      //   trigger: ".homepage",
-      //   scroller: "body",
-      //   markers: true,
-      //   scrub: 2,
-      // },
     });
   });
   useGSAP(() => {
@@ -360,13 +333,6 @@ function Home({ isOpen, setIsOpen }) {
       x: 100,
       opacity: 0,
       duration: 0.5,
-      // scrollTrigger: {
-      //   trigger: ".homepage",
-      //   scroller: "body",
-      //   start: "top -100%",
-      //   markers: true,
-      //   scrub: 2,
-      // },
     });
   });
 
@@ -504,7 +470,6 @@ function ContactMe() {
   useGSAP(() => {
     tl4.from(".contactcard", {
       x: 50,
-      // scale: 0.6,
       duration: 1,
       delay: 1,
       stagger: 0.3,
@@ -598,22 +563,13 @@ Contact.propTypes = {
 };
 
 function Footer() {
-  // useGSAP(() => {
-  //   gsap.from(".footerr", {
-  //     y: -50,
-  //     opacity: 0,
-  //     duration: 1,
-  //     delay: 2,
-  //     scrollTrigger: {
-  //       trigger: ".footerr",
-  //       scroller: "body",
-  //       top: "top 50%",
-  //       markers: true,
-  //       end: "center 20%",
-  //       scrub: 2,
-  //     },
-  //   });
-  // });
+  useEffect(() => {
+    gsap.from(".footerr", {
+      y: 10,
+      duration: 1,
+      // delay: 0.4,
+    });
+  });
   return (
     <div>
       <footer className="text-stone-200 p-8 md:text-xl sm:text-md text-sm main font-thin text-center">
