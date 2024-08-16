@@ -10,12 +10,14 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import MySkill from "./components/Skills/MySkill.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/Home" element={<Layout />}>
+    <Route path="/" element={<Layout />}>
       <Route path="/Home" element={<Home />} />
       <Route path="/About" element={<About />} />
+      <Route path="/Skills" element={<MySkill />} />
     </Route>
   )
 );
