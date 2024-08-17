@@ -32,12 +32,12 @@ function About() {
   //   });
 
   return (
-    <div className="aboutpage About_me flex justify-around p-4 md:p-12 md:gap-8 max-md:flex-col items-center text-white w-full py-12">
-      <div className="aboutleft md:w-3/5 md:px-12 w-full flex flex-col items-start">
-        <h1 className="leading-normal text-4xl text-start">
+    <div className="aboutpage About_me flex justify-around p-4 md:p-12 h-[80vh] md:gap-8 max-md:flex-col items-center text-white w-full py-12">
+      <div className="aboutleft md:w-3/5 md:px-12 w-full flex flex-col">
+        <h1 className="leading-normal text-4xl text-center ">
           About <span className="text-yellow-500">Me</span>
         </h1>
-        <h2 className="text-start text-3xl text-yellow-500 font-bold">
+        <h2 className="text-start text-3xl text-yellow-500 font-light">
           Front-end Developer
         </h2>
         <p className="leading-normal text-lg font-light w-full">

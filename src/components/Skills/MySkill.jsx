@@ -32,16 +32,17 @@ function MySkill() {
   //     });
   //   });
   return (
-    <div className="About_me skillpage flex-col items-center justify-center p-4 md:p-8 ">
+    <div className="text-white About_me skillpage flex-col h-[80vh] items-center justify-center p-4 md:p-8 ">
       <h1 className="heading2 text-4xl p-4 text-center">
         My <span className="text-yellow-500">Skills</span>
       </h1>
       <div className="flex flex-wrap gap-4 items-center justify-center font-medium">
         <Skill width="w-[100%]" name="Html" percent="100%" />
         <Skill width="w-[90%]" name="Css" percent="90%" />
-        <Skill width="w-[70%]" name="Javascript" percent="70%" />
-        <Skill width="w-[80%]" name="Tailwind" percent="90%" />
+        <Skill width="w-[78%]" name="Javascript" percent="78%" />
+        <Skill width="w-[100%]" name="Tailwind" percent="100%" />
         <Skill width="w-[80%]" name="React" percent="80%" />
+        <Skill width="w-[75%]" name="Django" percent="75%" />
       </div>
     </div>
   );

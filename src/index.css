@@ -113,9 +113,7 @@ body {
 .border {
   border: 2px solid rgb(255, 197, 6);
 }
-.hover:hover {
-  border: 2px solid rgb(255, 197, 6);
-}
+
 .fill:hover {
   background: #20256a;
 }
