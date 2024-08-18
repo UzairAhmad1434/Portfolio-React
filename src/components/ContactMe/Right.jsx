@@ -1,4 +1,24 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 function Right({ source, name }) {
+  useGSAP(() => {
+    gsap.from(".contactcard", {
+      y: -50,
+      duration: 1,
+      delay: 1,
+      stagger: 0.3,
+      ScrollTrigger: {
+        trigger: ".contactcard",
+        scroller: "body",
+        top: "top 0%",
+        end: "top -100%",
+        scrub: 2,
+      },
+    });
+  });
   return (
     <div className="contactcard About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">

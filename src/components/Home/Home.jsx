@@ -1,33 +1,39 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Home() {
   // { isOpen, setIsOpen }
-  //   let tl = gsap.timeline();
+  let tl = gsap.timeline();
 
-  //   useGSAP(() => {
-  //     tl.from(".leftside", {
-  //       x: -100,
-  //       opacity: 0,
-  //       duration: 0.8,
-  //     });
-  //   });
-  //   useGSAP(() => {
-  //     tl.from(".roll", {
-  //       x: 20,
-  //       rotate: 360,
-  //       duration: 1,
-  //       stagger: 0.5,
-  //     });
-  //   });
-  //   useGSAP(() => {
-  //     tl.from(".homeimage", {
-  //       scale: 0.7,
-  //       x: 100,
-  //       opacity: 0,
-  //       duration: 0.5,
-  //     });
-  //   });
+  useGSAP(() => {
+    tl.from(".leftside", {
+      x: -100,
+      opacity: 0,
+      duration: 0.8,
+    });
+  });
+  useGSAP(() => {
+    tl.from(".roll", {
+      x: 20,
+      rotate: 360,
+      duration: 1,
+      stagger: 0.5,
+    });
+  });
+  useGSAP(() => {
+    tl.from(".homeimage", {
+      scale: 0.7,
+      x: 100,
+      opacity: 0,
+      duration: 0.5,
+    });
+  });
 
   return (
-    <div className="homepage h-[80vh] w-full main md:p-12 p-4 py-12 text-white">
+    <div className="homepage h-[90vh] w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
         <div className="left leftside md:w-3/5 md:px-8 w-full flex flex-col justify-center">
           <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">

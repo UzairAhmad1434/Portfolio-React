@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
@@ -9,21 +10,67 @@ const Navbar = () => {
           </span>
         </div>
         <ul className="list-none flex pt-2 pr-8 justify-around items-center gap-6 text-lg font-light cursor-pointer">
-          <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
-            Home
+          <li>
+            <NavLink
+              to="/Home"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              Home
+            </NavLink>
           </li>
-          <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
-            About
+          <li>
+            <NavLink
+              to="/About"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              About
+            </NavLink>
           </li>
-          <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
-            Services
+          <li>
+            <NavLink
+              to="/Service"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              Services
+            </NavLink>
           </li>
-          <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
-            My Skills
+          <li>
+            <NavLink
+              to="/Contact"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              Contact me
+            </NavLink>
           </li>
-          <li className="hidden md:flex hover:border-b-2 border-yellow-500 transition-all duration-100 ease-in-out">
-            My Work
+          <li>
+            <NavLink
+              to="/Skills"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              Skills
+            </NavLink>
           </li>
+
           <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-yellow-500 border-2 fill justify-center items-center px-4  ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
             Hire Me
           </li>

@@ -1,41 +1,31 @@
 import Input from "./Input";
 import Right from "./Right";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function ContactMe() {
-  //   let tl4 = gsap.timeline();
-  //   useGSAP(() => {
-  //     tl4.from(".contact_card", {
-  //       // scale: 0.4,
-  //       x: -200,
-  //       duration: 1,
-  //       delay: 0.5,
-  //       scrollTrigger: {
-  //         trigger: ".contact",
-  //         scroller: "body",
-  //         top: "center 60%",
-  //         end: "center 20%",
-  //         scrub: 2,
-  //       },
-  //     });
-  //   });
-  //   useGSAP(() => {
-  //     tl4.from(".contactcard", {
-  //       x: 50,
-  //       duration: 1,
-  //       delay: 1,
-  //       stagger: 0.3,
-  //       scrollTrigger: {
-  //         trigger: ".skillpage",
-  //         scroller: "body",
-  //         top: "top 0%",
-  //         end: "top -100%",
-  //         scrub: 2,
-  //       },
-  //     });
-  //   });
+  let tl4 = gsap.timeline();
+  useGSAP(() => {
+    tl4.from(".contact_card", {
+      // scale: 0.4,
+      x: -200,
+      duration: 1,
+      delay: 0.5,
+      scrollTrigger: {
+        trigger: ".contact",
+        scroller: "body",
+        top: "center 60%",
+        end: "center 20%",
+        scrub: 2,
+      },
+    });
+  });
 
   return (
-    <div className="h-[80vh] About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
+    <div className="h-[90vh] About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
       <div className="w-full flex flex-col items-center h-fit gap-4 px-2 py-4 sm:p-4">
         <Right name="+923135167976" source="./Image/phone.svg" />
         <Right name="Kamra,Pakistan" source="./Image/location.svg" />
