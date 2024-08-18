@@ -26,8 +26,8 @@ function ContactMe() {
   });
 
   return (
-    <div className="h-[90vh] About_me md:p-8 p-4 flex lg:flex-row-reverse flex-col contact w-full justify-center items-center">
-      <div className="w-full flex flex-col items-center h-fit gap-4 px-2 py-4 sm:p-4">
+    <div className="md:h-[80vh] h-auto About_me md:p-8 p-4 gap-8 flex lg:flex-row-reverse flex-col-reverse contact w-full justify-center items-center">
+      <div className="w-full flex flex-col items-center  gap-4 px-2 py-4 sm:p-4">
         <Right
           className="contactcard"
           name="+923135167976"
@@ -39,9 +39,9 @@ function ContactMe() {
           source="./Image/email.svg"
         />
       </div>
-      <div className="contact_card  h-[75vh] flex hover shadow-sm shadow-black justify-center md:p-8  rounded-xl w-full flex-col items-center  lg:mx-8 main gap-2">
+      <div className="contact_card  h-auto md:h-[75vh] flex hover shadow-blue-600 shadow-md justify-center md:p-8 p-4 rounded-xl w-full flex-col items-center  lg:mx-8 main gap-2">
         <h1 className="text-yellow-500 sm:text-3xl text-lg sm:text-start m-0 sm:m-4 text-center">
-          Let's Work Together
+          Let&#x2019;s Work Together
         </h1>
 
         <div className="display sm:text-lg text-md flex flex-wrap gap-4 sm:gap-8 items-center justify-center">

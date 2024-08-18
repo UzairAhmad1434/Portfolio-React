@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 function Skill({ name, percent, width }) {
   return (
     <div className="text-white scale p-[24px] flex flex-col gap-2 md:w-[45%] w-[90%]">
@@ -11,5 +12,10 @@ function Skill({ name, percent, width }) {
     </div>
   );
 }
+Skill.propTypes = {
+  name: PropTypes.string,
+  percent: PropTypes.string,
+  width: PropTypes.string,
+};
 
 export default Skill;

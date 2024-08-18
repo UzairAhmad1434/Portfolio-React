@@ -12,7 +12,7 @@ function Footer() {
       <footer className="text-stone-200 p-4 h-[10vh] md:text-xl sm:text-md text-sm main font-thin text-center">
         <p className="footerr">
           {" "}
-          &#169;2024 Copyright Reserved | Uzair's Portfolio
+          &#169;2024 Copyright Reserved | Uzair&#x2019;s Portfolio
         </p>
       </footer>
     </div>

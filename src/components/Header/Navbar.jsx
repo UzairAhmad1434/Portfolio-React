@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,33 +106,36 @@ function Dropdown({ setIsOpen }) {
       <li className="li flex text-md px-4 hover:bg-yellow-600 w-full items-center justify-center bg-yellow-500 transition-all duration-100 ease-in-out">
         Hire Me
       </li>
-      <li className="li p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className="li p-4 text-center transition-all duration-100 ease-in-out  border-yellow-500">
         <NavLink to="Home" onClick={() => setIsOpen(false)}>
           Home
         </NavLink>
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out  border-yellow-500">
         <NavLink to="About" onClick={() => setIsOpen(false)}>
           About
         </NavLink>
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out border-yellow-500">
         <NavLink to="Service" onClick={() => setIsOpen(false)}>
           Services
         </NavLink>
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
+      <li className="p-4 text-center transition-all duration-100 ease-in-out  border-yellow-500">
         <NavLink to="Skills" onClick={() => setIsOpen(false)}>
           Skills
         </NavLink>
       </li>
-      <li className="p-4 text-center transition-all duration-100 ease-in-out hover:border-b-2 border-yellow-500">
-        <NavLink to=" Contact" onClick={() => setIsOpen(false)}>
+      <li className="p-4 text-center transition-all duration-100 ease-in-out border-yellow-500">
+        <NavLink to="Contact" onClick={() => setIsOpen(false)}>
           Contact Me
         </NavLink>
       </li>
     </ul>
   );
 }
+Dropdown.propTypes = {
+  setIsOpen: PropTypes.func.isRequired,
+};
 
 export default Navbar;

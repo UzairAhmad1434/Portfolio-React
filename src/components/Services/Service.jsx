@@ -15,7 +15,7 @@ function Service() {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -24,11 +24,11 @@ function Service() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 2,
+          initialSlide: 1,
         },
       },
       {

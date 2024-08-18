@@ -5,11 +5,15 @@ function Home() {
   let tl = gsap.timeline();
 
   useGSAP(() => {
-    tl.from(".leftside", {
-      x: -100,
-      opacity: 0,
-      duration: 0.8,
-    });
+    tl.from(
+      ".leftside",
+      {
+        x: -100,
+        opacity: 0,
+        duration: 0.8,
+      },
+      "ll"
+    );
   });
   useGSAP(() => {
     tl.from(
@@ -28,7 +32,6 @@ function Home() {
       ".homeimage",
       {
         scale: 0.4,
-        // x: 100,
         opacity: 0,
         duration: 0.8,
       },
@@ -37,7 +40,7 @@ function Home() {
   });
 
   return (
-    <div className="homepage lg:h-[80vh] h-auto w-full main md:p-12 p-4 py-12 text-white">
+    <div className="homepage md:h-[80vh] h-auto w-full main md:p-12 p-4 py-12 text-white">
       <div className="flex w-full lg:gap-0 md:gap-8 gap-8 justify-around max-md:flex-col">
         <div className="left leftside md:w-3/5 md:px-8 w-full flex flex-col justify-center">
           <h2 className="leading-normal lg:text-3xl text-2xl font-light text-start">

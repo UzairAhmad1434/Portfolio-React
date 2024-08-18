@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 function Card({ card }) {
   return (
-    <div className="cardd md:w-80 w-full main md:p-8 p-4 md:m-4 m-2 rounded-md shadow-sm shadow-white">
+    <div className="cardd flex flex-col items-center lg:w-80 md:w-96 w-full main md:p-8 p-4 md:m-4 m-4 rounded-md shadow-sm shadow-white">
       <h1 className="card1 text-yellow-400 text-left text-2xl">{card}</h1>
       <p className="card1 text-md text-left font-light">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta id
@@ -11,4 +12,7 @@ function Card({ card }) {
     </div>
   );
 }
+Card.propTypes = {
+  card: PropTypes.string.isRequired,
+};
 export default Card;

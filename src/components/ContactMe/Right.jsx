@@ -1,14 +1,5 @@
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import PropTypes from "prop-types";
 function Right({ source, name }) {
-  useGSAP(() => {
-    gsap.from(".contactcard", {
-      y: -50,
-      duration: 1,
-      delay: 1,
-      stagger: 0.3,
-    });
-  });
   return (
     <div className="contactcard About_me w-full flex sm:flex-row flex-col items-center rounded-md p-2 shadow-sm shadow-black">
       <div className="bg-yellow-500 rounded-md m-2 sm:mx-2">
@@ -18,4 +9,8 @@ function Right({ source, name }) {
     </div>
   );
 }
+Right.propTypes = {
+  source: PropTypes.string,
+  name: PropTypes.string,
+};
 export default Right;

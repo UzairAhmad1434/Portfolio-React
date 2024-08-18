@@ -37,7 +37,7 @@ function MySkill() {
     });
   });
   return (
-    <div className="text-white About_me skillpage flex-col h-[80vh] items-center justify-center p-4 md:p-8 ">
+    <div className="text-white About_me skillpage flex-col md:h-[80vh] sm:h-auto items-center justify-center p-4 md:p-8 ">
       <h1 className="heading2 text-4xl p-4 text-center">
         My <span className="text-yellow-500">Skills</span>
       </h1>
