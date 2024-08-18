@@ -1,11 +1,12 @@
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 function Footer() {
-  //   useEffect(() => {
-  //     gsap.from(".footerr", {
-  //       y: 10,
-  //       duration: 1,
-  //       // delay: 0.4,
-  //     });
-  //   });
+  useGSAP(() => {
+    gsap.from(".footerr", {
+      y: -50,
+      duration: 1,
+    });
+  });
   return (
     <div>
       <footer className="text-stone-200 p-4 h-[10vh] md:text-xl sm:text-md text-sm main font-thin text-center">

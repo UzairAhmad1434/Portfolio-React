@@ -4,9 +4,7 @@ import Card from "./Card";
 import Slider from "react-slick";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 function Service() {
   var settings = {
     dots: true,
@@ -28,7 +26,7 @@ function Service() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -50,15 +48,6 @@ function Service() {
       y: -40,
       x: -40,
       duration: 1,
-      scrollTrigger: {
-        trigger: ".cardpage",
-        markers: true,
-        scroller: "body",
-        top: "top 0%",
-        end: "end -80%",
-        marker: true,
-        scrub: 2,
-      },
     });
   });
   useGSAP(() => {
@@ -67,19 +56,12 @@ function Service() {
       scale: 0.6,
       duration: 1,
       delay: 0.5,
-      scrollTrigger: {
-        trigger: ".cardpage",
-        scroller: "body",
-        top: "top 50%",
-        end: "end -100%",
-        scrub: 2,
-      },
     });
   });
 
   return (
-    <div className="text-white h-[90vh] cardpage slider-container">
-      <div className="main slider-container h-[90vh] p-8">
+    <div className="text-white h-[80vh] cardpage slider-container">
+      <div className="main slider-container h-[80vh] p-8">
         <h1 className="heading1 text-4xl p-4 text-center">
           My <span className="text-yellow-500">Services</span>
         </h1>

@@ -1,44 +1,52 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 function About() {
   let tl2 = gsap.timeline();
 
   useGSAP(() => {
-    tl2.from(".aboutleft", {
-      x: -100,
-      opacity: 0.7,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".aboutleft",
-        scroller: "body",
-        top: "top 0",
-        end: "top -100%",
-        scrub: 2,
+    tl2.from(
+      ".aboutleft",
+      {
+        x: -100,
+        opacity: 0.7,
+        duration: 1,
+        // scrollTrigger: {
+        //   trigger: ".aboutleft",
+        //   scroller: "body",
+        //   top: "top 0",
+        //   end: "top -100%",
+        //   scrub: 2,
+        // },
       },
-    });
+      "lll"
+    );
   });
   useGSAP(() => {
-    tl2.from(".aboutimage", {
-      scale: 0.7,
-      opacity: 0,
-      duration: 0.6,
-      scrollTrigger: {
-        trigger: ".aboutpage",
-        scroller: "body",
-        top: "top 50%",
-        end: "top -50%",
-        marker: true,
-        scrub: 2,
+    tl2.from(
+      ".aboutimage",
+      {
+        scale: 0.7,
+        opacity: 0,
+        duration: 0.6,
+        // scrollTrigger: {
+        //   trigger: ".aboutpage",
+        //   scroller: "body",
+        //   top: "top 50%",
+        //   end: "top -50%",
+        //   marker: true,
+        //   scrub: 2,
+        // },
       },
-    });
+      "lll"
+    );
   });
 
   return (
-    <div className="aboutpage About_me flex justify-around p-4 md:p-12 h-[90vh] md:gap-8 max-md:flex-col items-center text-white w-full py-12">
+    <div className="aboutpage About_me flex justify-around p-4 md:p-12 h-[80vh] md:gap-8 max-md:flex-col items-center text-white w-full py-12">
       <div className="aboutleft md:w-3/5 md:px-12 w-full flex flex-col">
         <h1 className="leading-normal text-4xl text-center ">
           About <span className="text-yellow-500">Me</span>

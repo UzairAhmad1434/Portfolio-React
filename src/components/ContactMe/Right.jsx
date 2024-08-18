@@ -1,8 +1,5 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 function Right({ source, name }) {
   useGSAP(() => {
     gsap.from(".contactcard", {
@@ -10,13 +7,6 @@ function Right({ source, name }) {
       duration: 1,
       delay: 1,
       stagger: 0.3,
-      ScrollTrigger: {
-        trigger: ".contactcard",
-        scroller: "body",
-        top: "top 0%",
-        end: "top -100%",
-        scrub: 2,
-      },
     });
   });
   return (
