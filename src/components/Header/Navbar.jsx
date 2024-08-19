@@ -83,6 +83,18 @@ const Navbar = () => {
               Skills
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="Project"
+              className={({ isActive }) =>
+                `hidden ${
+                  isActive ? "border-b-2 border-yellow-500" : "border-b-0"
+                } md:flex transition-all duration-100 ease-in-out`
+              }
+            >
+              Projects
+            </NavLink>
+          </li>
 
           <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-yellow-500 border-2 fill justify-center items-center px-4 ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
             Hire Me
@@ -129,6 +141,11 @@ function Dropdown({ setIsOpen }) {
       <li className="p-4 text-center transition-all duration-100 ease-in-out border-yellow-500">
         <NavLink to="Contact" onClick={() => setIsOpen(false)}>
           Contact Me
+        </NavLink>
+      </li>
+      <li className="p-4 text-center transition-all duration-100 ease-in-out border-yellow-500">
+        <NavLink to="Project" onClick={() => setIsOpen(false)}>
+          Projects
         </NavLink>
       </li>
     </ul>

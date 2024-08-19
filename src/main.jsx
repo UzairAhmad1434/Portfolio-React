@@ -6,6 +6,7 @@ import Layout from "./Layout.jsx";
 import About from "./components/About/About";
 import Contact from "./components/ContactMe/Contact";
 import Service from "./components/Services/Service.jsx";
+import Project from "./components/Project/Project";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/Skills" element={<MySkill />} />
       <Route path="/Contact" element={<Contact />} />
       <Route path="/Service" element={<Service />} />
+      <Route path="/Project" element={<Project />} />
     </Route>
   )
 );

@@ -1,40 +1,32 @@
 import Skill from "./Skill";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 function MySkill() {
   let tl3 = gsap.timeline();
 
   useGSAP(() => {
-    tl3.from(".heading2", {
-      y: -50,
-      duration: 1,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".skillpage",
-        scroller: "body",
-        top: "center 60%",
-        end: "center 20%",
-        scrub: 2,
+    tl3.from(
+      ".heading2",
+      {
+        y: -50,
+        duration: 0.7,
+        opacity: 0,
       },
-    });
+      "llll"
+    );
   });
   useGSAP(() => {
-    tl3.from(".scale", {
-      x: -50,
-      duration: 0.7,
-      // stagger: 0.1,
-      scrollTrigger: {
-        trigger: ".skillpage",
-        scroller: "body",
-        top: "top 0%",
-        staggers: 0.3,
-        end: "top -100%",
-        scrub: 2,
+    tl3.from(
+      ".scale",
+      {
+        // x: -50,
+        duration: 0.9,
+        width: 0,
+        opacity: 0,
       },
-    });
+      "llll"
+    );
   });
   return (
     <div className="text-white About_me skillpage flex-col md:h-[80vh] sm:h-auto items-center justify-center p-4 md:p-8 ">
