@@ -44,19 +44,24 @@ function Service() {
   let tl2 = gsap.timeline();
 
   useGSAP(() => {
-    tl2.from(".cardd", {
-      y: -40,
-      x: -40,
-      duration: 1,
-    });
-  });
-  useGSAP(() => {
-    tl2.from(".heading1", {
-      y: -50,
-      scale: 0.6,
-      duration: 1,
-      delay: 0.5,
-    });
+    tl2.from(
+      ".heading1",
+      {
+        y: -50,
+        scale: 0.6,
+        duration: 1,
+      },
+      "ll"
+    );
+    tl2.from(
+      ".cardd",
+      {
+        y: -40,
+        x: -40,
+        duration: 1,
+      },
+      "ll"
+    );
   });
 
   return (

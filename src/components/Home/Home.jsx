@@ -14,8 +14,6 @@ function Home() {
       },
       "ll"
     );
-  });
-  useGSAP(() => {
     tl.from(
       ".roll",
       {
@@ -26,8 +24,6 @@ function Home() {
       },
       "ll"
     );
-  });
-  useGSAP(() => {
     tl.from(
       ".homeimage",
       {

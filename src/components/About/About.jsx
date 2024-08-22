@@ -14,32 +14,15 @@ function About() {
         x: -100,
         opacity: 0.7,
         duration: 1,
-        // scrollTrigger: {
-        //   trigger: ".aboutleft",
-        //   scroller: "body",
-        //   top: "top 0",
-        //   end: "top -100%",
-        //   scrub: 2,
-        // },
       },
       "lll"
     );
-  });
-  useGSAP(() => {
     tl2.from(
       ".aboutimage",
       {
         scale: 0.7,
         opacity: 0,
         duration: 0.6,
-        // scrollTrigger: {
-        //   trigger: ".aboutpage",
-        //   scroller: "body",
-        //   top: "top 50%",
-        //   end: "top -50%",
-        //   marker: true,
-        //   scrub: 2,
-        // },
       },
       "lll"
     );

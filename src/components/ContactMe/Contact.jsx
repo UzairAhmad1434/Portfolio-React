@@ -9,20 +9,24 @@ import { useGSAP } from "@gsap/react";
 function ContactMe() {
   let tl4 = gsap.timeline();
   useGSAP(() => {
-    tl4.from(".contact_card", {
-      // scale: 0.4,
-      x: -200,
-      duration: 1,
-      delay: 0.5,
-    });
-  });
-  useGSAP(() => {
-    gsap.from(".contactcard", {
-      y: -50,
-      duration: 1,
-      delay: 1,
-      stagger: 0.3,
-    });
+    tl4.from(
+      ".contact_card",
+      {
+        // scale: 0.4,
+        x: -200,
+        duration: 1,
+      },
+      "ll"
+    );
+    tl4.from(
+      ".contactcard",
+      {
+        y: -50,
+        duration: 1,
+        stagger: 0.3,
+      },
+      "ll"
+    );
   });
 
   return (
