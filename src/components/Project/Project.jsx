@@ -45,8 +45,8 @@ const Project = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
               aperiam harum
             </p>
-            <a href="https://github.com/UzairAhmad1434/currency_Converter">
-              <button className="bg-white p-2 rounded-full">
+            <a href="https://github.com/UzairAhmad1434/WeatherApp">
+              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45 ">
                 <img src="./Image/arrow.svg" alt="" />
               </button>
             </a>
@@ -57,8 +57,8 @@ const Project = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
               aperiam harum
             </p>
-            <a href="https://github.com/UzairAhmad1434/currency_Converter">
-              <button className="bg-white p-2 rounded-full">
+            <a href="https://github.com/UzairAhmad1434/studybuddy">
+              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
                 <img src="./Image/arrow.svg" alt="" />
               </button>
             </a>
@@ -73,7 +73,7 @@ const Project = () => {
                 aperiam harum
               </p>
               <a href="https://github.com/UzairAhmad1434/currency_Converter">
-                <button className="bg-white p-2 rounded-full">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
                   <img src="./Image/arrow.svg" alt="" />
                 </button>
               </a>
@@ -85,8 +85,8 @@ const Project = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
               aperiam harum
             </p>
-            <a href="https://github.com/UzairAhmad1434/currency_Converter">
-              <button className="bg-white p-2 rounded-full">
+            <a href="https://github.com/UzairAhmad1434/JavaScript-Calculator">
+              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
                 <img src="./Image/arrow.svg" alt="" />
               </button>
             </a>
@@ -99,8 +99,8 @@ const Project = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
               aperiam harum
             </p>
-            <a href="https://github.com/UzairAhmad1434/currency_Converter">
-              <button className="bg-white p-2 rounded-full">
+            <a href="https://github.com/UzairAhmad1434/U_store-Ecommerce-store">
+              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
                 <img src="./Image/arrow.svg" alt="" />
               </button>
             </a>
@@ -113,8 +113,8 @@ const Project = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
               aperiam harum
             </p>
-            <a href="https://github.com/UzairAhmad1434/currency_Converter">
-              <button className="bg-white p-2 rounded-full">
+            <a href="https://github.com/UzairAhmad1434/TIC_TAC_TOE">
+              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
                 <img src="./Image/arrow.svg" alt="" />
               </button>
             </a>
