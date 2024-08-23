@@ -36,35 +36,46 @@ const Project = () => {
         <h1 className="project heading2 text-4xl px-4 text-center">
           My <span className="text-yellow-500">Projects</span>
         </h1>
-        <div className=" flex flex-wrap flex-row gap-4 items-center p-4 justify-center ">
-          <div className="bg-weather pract bg-cover p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
-            <h1 className="text-2xl text-yellow-500 font-medium">
-              Weather App
-            </h1>
-            <p className="text-md text-center ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              aperiam harum
-            </p>
-            <a href="https://github.com/UzairAhmad1434/WeatherApp">
-              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45 ">
-                <img src="./Image/arrow.svg" alt="" />
-              </button>
-            </a>
+        <div className="flex  font-medium flex-wrap flex-row gap-4 items-center p-4 justify-center ">
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-store bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-2xl text-yellow-500 font-medium">
+                Ecommerce Store
+              </h1>
+              <p className="text-md text-center ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                aperiam harum
+              </p>
+              <a href="https://github.com/UzairAhmad1434/U_store-Ecommerce-store">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
+                  <img src="./Image/arrow.svg" alt="" />
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="bg-study pract bg-cover p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
-            <h1 className="text-2xl text-yellow-500 font-medium">StudyBuddy</h1>
-            <p className="text-md text-center ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              aperiam harum
-            </p>
-            <a href="https://github.com/UzairAhmad1434/studybuddy">
-              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
-                <img src="./Image/arrow.svg" alt="" />
-              </button>
-            </a>
+
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-tictac bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-2xl text-yellow-500 font-medium">
+                Tic Tac Toe
+              </h1>
+              <p className="text-md text-center ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                aperiam harum
+              </p>
+              <a href="https://github.com/UzairAhmad1434/TIC_TAC_TOE">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
+                  <img src="./Image/arrow.svg" alt="" />
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="bg-cover pract rounded-md bg-currency w-72 h-48 ">
-            <div className="flex p-2  items-center justify-center flex-col w-72 h-48 rounded-md">
+
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-currency bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Currency Converter
               </h1>
@@ -79,45 +90,57 @@ const Project = () => {
               </a>
             </div>
           </div>
-          <div className="bg-calculator pract bg-cover p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
-            <h1 className="text-2xl text-yellow-500 font-medium">Calculator</h1>
-            <p className="text-md text-center ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              aperiam harum
-            </p>
-            <a href="https://github.com/UzairAhmad1434/JavaScript-Calculator">
-              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
-                <img src="./Image/arrow.svg" alt="" />
-              </button>
-            </a>
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-calculator bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-2xl text-yellow-500 font-medium">
+                Calculator
+              </h1>
+              <p className="text-md text-center bg-opacity-0 ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                aperiam harum
+              </p>
+              <a href="https://github.com/UzairAhmad1434/JavaScript-Calculator">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
+                  <img src="./Image/arrow.svg" alt="" />
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="bg-store pract bg-cover p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
-            <h1 className="text-2xl text-yellow-500 font-medium">
-              Ecommerce Store
-            </h1>
-            <p className="text-md text-center ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              aperiam harum
-            </p>
-            <a href="https://github.com/UzairAhmad1434/U_store-Ecommerce-store">
-              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
-                <img src="./Image/arrow.svg" alt="" />
-              </button>
-            </a>
+
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-study bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-2xl text-yellow-500 font-medium">
+                StudyBuddy
+              </h1>
+              <p className="text-md text-center ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                aperiam harum
+              </p>
+              <a href="https://github.com/UzairAhmad1434/studybuddy">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
+                  <img src="./Image/arrow.svg" alt="" />
+                </button>
+              </a>
+            </div>
           </div>
-          <div className="bg-tictac pract bg-cover p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
-            <h1 className="text-2xl text-yellow-500 font-medium">
-              Tic Tac Toe
-            </h1>
-            <p className="text-md text-center ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-              aperiam harum
-            </p>
-            <a href="https://github.com/UzairAhmad1434/TIC_TAC_TOE">
-              <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45">
-                <img src="./Image/arrow.svg" alt="" />
-              </button>
-            </a>
+          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+            <div className="absolute inset-0 bg-weather bg-cover bg-center opacity-50 rounded-md"></div>
+            <div className="relative z-10 text-center">
+              <h1 className="text-2xl text-yellow-500 font-medium">
+                Weather App
+              </h1>
+              <p className="text-md text-center ">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+                aperiam harum
+              </p>
+              <a href="https://github.com/UzairAhmad1434/WeatherApp">
+                <button className="bg-white p-2 rounded-full transition-transform duration-300 ease-in-out  hover:rotate-45 ">
+                  <img src="./Image/arrow.svg" alt="" />
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
