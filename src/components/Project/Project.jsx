@@ -37,7 +37,7 @@ const Project = () => {
           My <span className="text-yellow-500">Projects</span>
         </h1>
         <div className="flex  font-medium flex-wrap flex-row gap-4 items-center p-4 justify-center ">
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-store bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
@@ -55,7 +55,7 @@ const Project = () => {
             </div>
           </div>
 
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-tictac bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
@@ -73,7 +73,7 @@ const Project = () => {
             </div>
           </div>
 
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-currency bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
@@ -90,7 +90,7 @@ const Project = () => {
               </a>
             </div>
           </div>
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-calculator bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
@@ -108,7 +108,7 @@ const Project = () => {
             </div>
           </div>
 
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-study bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
@@ -125,7 +125,7 @@ const Project = () => {
               </a>
             </div>
           </div>
-          <div className="relative p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
+          <div className="relative pract p-2 flex items-center justify-center flex-col w-72 h-48 rounded-md">
             <div className="absolute inset-0 bg-weather bg-cover bg-center opacity-50 rounded-md"></div>
             <div className="relative z-10 text-center">
               <h1 className="text-2xl text-yellow-500 font-medium">
