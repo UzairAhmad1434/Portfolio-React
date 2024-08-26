@@ -18,7 +18,7 @@ import MySkill from "./components/Skills/MySkill.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="/Home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/About" element={<About />} />
       <Route path="/Skills" element={<MySkill />} />
       <Route path="/Contact" element={<Contact />} />

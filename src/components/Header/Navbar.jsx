@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul className="list-none flex pt-2 pr-8 justify-around items-center gap-6 text-lg font-light cursor-pointer">
           <li>
             <NavLink
-              to="Home"
+              to="/"
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
