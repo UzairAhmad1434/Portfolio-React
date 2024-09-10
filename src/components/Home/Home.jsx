@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import TypingAnimation from "../magicui/typing-animation";
+// import ShimmerButton from "@/components/magicui/shimmer-button";
 
 function Home() {
   let tl = gsap.timeline();
@@ -56,6 +57,14 @@ function Home() {
             Frontend
             <br /> Developer
           </p>
+          {/* <div className="z-10 flex min-h-[16rem] items-center justify-center">
+            <ShimmerButton className="shadow-2xl">
+              <span className="border-0 whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                Shimmer Button
+              </span>
+            </ShimmerButton>
+          </div> */}
+
           <div className="lg:h-16 h-12 my-8 flex gap-2">
             <button className="slide lg:p-4 p-2 fill font-bold gap-2 flex items-center justify-center text-md lg:text-xl rounded-full lg:w-52 w-40 text-yellow-500 bg-transparent border-2 border-yellow-500 transition-all duration-300 ease-in-out">
               <p>Download CV</p>
