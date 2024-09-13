@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import TypingAnimation from "../magicui/typing-animation";
-// import ShimmerButton from "@/components/magicui/shimmer-button";
+import { BorderBeam } from "../magicui/border-beam";
 
 function Home() {
   let tl = gsap.timeline();
@@ -84,10 +84,11 @@ function Home() {
         </div>
         <div className="right flex items-center justify-center md:p-4">
           <img
-            className="homeimage md:w-96 w-full"
-            src="./image/1.jpg"
+            className="homeimage rounded-md md:w-96 md:h-96 w-full"
+            src="./image/mine.png"
             alt="imggg"
           />
+          <BorderBeam size={250} duration={12} delay={9} />
         </div>
       </div>
     </div>

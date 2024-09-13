@@ -48,9 +48,9 @@ function About() {
           Lets Talk
         </button>
       </div>
-      <div className="right flex items-center justify-center md:w-2/5 w-full">
+      <div className="right flex items-center  justify-center md:w-2/5 w-full">
         <img
-          className="aboutimage md:w-96 w-full"
+          className="aboutimage rounded-md md:w-96 w-full"
           src="./image/aboutimg.jpg"
           alt="imggg"
         />
