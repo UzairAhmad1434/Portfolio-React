@@ -29,7 +29,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               Home
@@ -41,7 +41,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               About
@@ -53,7 +53,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               Services
@@ -65,7 +65,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               Contact Me
@@ -77,7 +77,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               Skills
@@ -89,18 +89,18 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hidden ${
                   isActive ? "border-b-2 border-yellow-500" : "border-b-0"
-                } md:flex transition-all duration-100 ease-in-out`
+                } lg:flex transition-all duration-100 ease-in-out`
               }
             >
               Projects
             </NavLink>
           </li>
 
-          <li className="hidden md:flex text-md text-yellow-500 py-2 font-bold border-yellow-500 border-2 fill justify-center items-center px-4 ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
+          <li className="hidden lg:flex text-md text-yellow-500 py-2 font-bold border-yellow-500 border-2 fill justify-center items-center px-4 ml-12 rounded-full bg-transparent transition-all duration-100 ease-in-out">
             Hire Me
           </li>
           <img
-            className="md:hidden w-8 h-8"
+            className="lg:hidden w-8 h-8"
             alt="menu"
             src={isOpen ? "./Image/cancel.svg" : "./Image/menu.svg"}
             onClick={() => setIsOpen(!isOpen)}

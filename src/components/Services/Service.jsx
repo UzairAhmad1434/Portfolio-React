@@ -70,7 +70,7 @@ function Service() {
         <h1 className="heading1 text-4xl p-4 text-center">
           My <span className="text-yellow-500">Services</span>
         </h1>
-        <div className="slider ">
+        <div className="slider gap-4 ">
           <Slider {...settings}>
             <Card card="Web Development" />
             <Card card="Web Design" />
