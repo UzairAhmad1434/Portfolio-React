@@ -119,7 +119,7 @@ function Dropdown({ setIsOpen }) {
         Hire Me
       </li>
       <li className="li p-4 text-center transition-all duration-100 ease-in-out  border-yellow-500">
-        <NavLink to="Home" onClick={() => setIsOpen(false)}>
+        <NavLink to="/" onClick={() => setIsOpen(false)}>
           Home
         </NavLink>
       </li>

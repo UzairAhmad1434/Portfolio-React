@@ -57,7 +57,7 @@ function Service() {
       ".cardd",
       {
         y: -40,
-        x: -40,
+        // x: -40,
         duration: 1,
       },
       "ll"
