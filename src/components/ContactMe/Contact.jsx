@@ -44,6 +44,7 @@ function ContactMe() {
           source="./Image/email.svg"
         />
       </div>
+
       <div className="contact_card  h-auto md:h-[75vh] flex hover shadow-blue-600 shadow-md justify-center md:p-8 p-4 rounded-xl w-full flex-col items-center  lg:mx-8 main gap-2">
         <BorderBeam
           size={300}

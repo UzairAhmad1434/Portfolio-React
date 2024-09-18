@@ -8,15 +8,6 @@ function Home() {
 
   useGSAP(() => {
     tl.from(
-      ".leftside",
-      {
-        x: -100,
-        opacity: 0,
-        duration: 0.8,
-      },
-      "ll"
-    );
-    tl.from(
       ".roll",
       {
         x: 20,
