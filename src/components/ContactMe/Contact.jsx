@@ -31,7 +31,7 @@ function ContactMe() {
   });
 
   return (
-    <div className="md:h-[80vh] h-auto About_me md:p-8 p-4 gap-8 flex lg:flex-row-reverse flex-col-reverse contact w-full justify-center items-center">
+    <div className="md:h-[80vh] overflow-hidden h-auto About_me md:p-8 p-4 gap-8 flex lg:flex-row-reverse flex-col-reverse contact w-full justify-center items-center">
       <div className="w-full flex flex-col items-center  gap-4 px-2 py-4 sm:p-4">
         <Right
           className="contactcard"
@@ -45,13 +45,7 @@ function ContactMe() {
         />
       </div>
 
-      <div className="contact_card  h-auto md:h-[75vh] flex hover shadow-blue-600 shadow-md justify-center md:p-8 p-4 rounded-xl w-full flex-col items-center  lg:mx-8 main gap-2">
-        <BorderBeam
-          size={300}
-          duration={20}
-          colorFrom="yellow"
-          colorTo="orange"
-        />
+      <div className="contact_card  h-auto md:h-[75vh] flex hover shadow-blue-800 shadow-md justify-center md:p-8 p-4  rounded-xl w-full flex-col items-center  lg:mx-8 main gap-2">
         <h1 className="text-yellow-500 sm:text-3xl text-lg sm:text-start m-0 sm:m-4 text-center">
           Let&#x2019;s Work Together
         </h1>
@@ -64,7 +58,7 @@ function ContactMe() {
           <Input type="email" placeholder="Email" className="full" />
 
           <textarea
-            className="side full About_me text-lg text-white py-2 px-4 hover rounded-md transition-all transition-300 ease-in-out"
+            className="side full About_me text-lg placeholder-slate-400 text-white  py-2 px-4 hover rounded-md transition-all transition-300 ease-in-out"
             name="textarea"
             placeholder="Type Your Message Here"
             id=""
@@ -76,6 +70,7 @@ function ContactMe() {
             Send Message
           </button>
         </div>
+        <BorderBeam size={300} duration={15} className={""} />
       </div>
     </div>
   );

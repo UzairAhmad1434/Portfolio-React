@@ -12,13 +12,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       animation: {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
@@ -30,14 +23,21 @@ module.exports = {
           },
         },
       },
-      backgroundImage: {
-        store: "url('/Image/u_store.jpg')",
-        tictac: "url('/Image/tictac.jpg')",
-        currency: "url('/Image/currency.jpg')",
-        calculator: "url('/Image/Calculator.jpg')",
-        study: "url('/Image/studybuddy.jpg')",
-        weather: "url('/Image/weather.jpg')",
+    },
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
+    },
+    backgroundImage: {
+      store: "url('/Image/u_store.jpg')",
+      tictac: "url('/Image/tictac.jpg')",
+      currency: "url('/Image/currency.jpg')",
+      calculator: "url('/Image/Calculator.jpg')",
+      study: "url('/Image/studybuddy.jpg')",
+      weather: "url('/Image/weather.jpg')",
     },
   },
 

@@ -43,7 +43,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Ecommerce Store
               </h1>
-              <p className="text-md text-center ">
+              <p className="text-md text-center mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>
@@ -61,7 +61,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Tic Tac Toe
               </h1>
-              <p className="text-md text-center ">
+              <p className="text-md text-center mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>
@@ -79,7 +79,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Currency Converter
               </h1>
-              <p className="text-md text-center ">
+              <p className="text-md text-center mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>
@@ -96,7 +96,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Calculator
               </h1>
-              <p className="text-md text-center bg-opacity-0 ">
+              <p className="text-md text-center bg-opacity-0 mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>
@@ -114,7 +114,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 StudyBuddy
               </h1>
-              <p className="text-md text-center ">
+              <p className="text-md text-center mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>
@@ -131,7 +131,7 @@ const Project = () => {
               <h1 className="text-2xl text-yellow-500 font-medium">
                 Weather App
               </h1>
-              <p className="text-md text-center ">
+              <p className="text-md text-center mb-4 ">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
                 aperiam harum
               </p>

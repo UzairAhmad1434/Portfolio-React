@@ -74,8 +74,8 @@ function Service() {
           <Slider {...settings}>
             <Card card="Web Development" />
             <Card card="Web Design" />
-            <Card card="Webflow Development" />
-            <Card card="Photography" />
+            <Card card="Machine Learning" />
+            <Card card="Data Science" />
             <Card card="Clean Code" />
           </Slider>
         </div>

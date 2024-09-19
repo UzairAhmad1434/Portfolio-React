@@ -16,12 +16,14 @@ const Navbar = () => {
   return (
     <>
       <nav className="About_me h-[10vh] p-2 flex sticky top-0 w-full main text-black-300 justify-between text-white z-50">
-        <div className="pl-8 logo text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
-          UZAIR{" "}
-          <span className="border-none text-yellow-500 font-extrabold hover:text-white">
-            .
-          </span>
-        </div>
+        <a href="/" className="pt-2">
+          <div className="pl-8 logo text-4xl flex items-center hover:text-yellow-500 cursor-pointer transition-all duration-500 ease-in-out font-light">
+            UZAIR{" "}
+            <span className="border-none text-yellow-500 font-extrabold hover:text-white">
+              .
+            </span>
+          </div>
+        </a>
         <ul className="list-none flex pt-2 pr-8 justify-around items-center gap-6 text-lg font-light cursor-pointer">
           <li>
             <NavLink
